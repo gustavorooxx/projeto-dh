@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="css/shop.css">
+  </head>
+
+  <%- include('./repeat_views/header'); %>
+
+<body>
+ <div class="page-container">
+
+    <aside class="filters">
+            
+        <div>
+            <h5>COR</h5>
+                <ul>
+                    <li><a href="">Preto (15)</a></li>
+                    <li><a href="">Amarelo (32)</a></li>
+                    <li><a href="">Azul (4)</a></li>
+                    <li><a href="">Vermelho (12)</a></li>
+                    <li><a href="">Branco (54)</a></li>
+                    <li><a href="">Bege (29)</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>MATERIAL</h5>
+                <ul>
+                    <li><a href="">Madeira (32)</a></li>
+                    <li><a href="">Metal (7)</a></li>
+                    <li><a href="">Concreto (4)</a></li>
+                    <li><a href="">Aço (17)</a></li>
+                    <li><a href="">Cobre (3)</a></li>
+                    <li><a href="">Vidro (27)</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>PREÇO</h5>
+            <form action="">
+                <label for="min-price">Min </label>
+                <input type="number" id="min-price" name="min-price" min="0" max="9999" step="10" value="30">
+                <label for="max-price">Max </label>
+                <input type="number" id="max-price" name="max-price" min="0" max="9999" step="10" value="50">
+                <input class="apply" type="submit" value="Aplicar">
+              </form>
+              
+        </div>
+    </aside>
+
+        <div class="products">
+            <section>
+                <article>
+                   <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div>
+                </article>
+
+                <article>
+                    <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div> 
+                </article>
+
+                <article>
+                    <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div>
+                  </article>
+  
+                <article>
+                    <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div>  
+                </article>
+                  
+                <article>
+                    <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div>  
+                </article>
+                  
+                <article>
+                    <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div>  
+                </article>
+                  
+                <article>
+                    <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div>  
+                </article>
+                  
+                <article>
+                    <img src="" alt="">
+                <div>
+                   <p>Lorem Ipsum</p>
+                   <span>R$100,00</span>
+                </div>  
+                </article>
+            </section>
+        </div>
+
+ </div>
+ 
+ <div class="pagination-container">
+    <nav>
+        <ul>
+            <li><a href="">←</a></li>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li><a href="">→</a></li>
+        </ul>
+    </nav>
+
+    <div class="view-all"><a href="">Ver tudo</a></div>
+</div>
+
+</body>
+
+  <%- include('./repeat_views/footer'); %>
+  </html>
