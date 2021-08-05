@@ -1,0 +1,51 @@
+*{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+title{
+    display: none;
+}
+body{
+    width: 80%;
+    height: 85%;
+    align-self: center;
+    margin-top: 10% ;
+    margin-bottom: 5%;
+    /* background-color: rgb(143, 120, 31); */
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding: 10% 10% 5% 10%; */
+}
+.usuario{
+    width: 30%;
+    height: 100%;
+    /* background-color: crimson; */
+    flex-direction: column;
+}
+.compras{
+    width: 60%;
+    height: 5%;
+    /* background-color: darkblue; */
+    flex-direction: row;
+    justify-content: space-between;
+}
+.paragrafo{
+    width: 50%;
+    text-align: right;
+}
+
+.botao{
+   
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    min-height: 20px;
+    background-color: black;
+    color:white;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/minhaConta.css">
+</head>
+<%- include('./repeat_views/header'); %>
+<body>
+    <section class="usuario">
+        <img src="" alt="imagemUsuario">
+        <br>
+        <span>
+            Olá @usuário!
+        </span>
+        <br>
+        <lu>
+            <li><a href="">Painel</a></li>
+            <li><a href="">Pedidos</a></li>
+            <li><a href="">Detalhes da conta</a></li>
+            <li><a href="">Sair</a></li>
+        </lu>
+    </section>
+    <section class="compras">
+        <p class= "paragrafo">
+            Nenhuma compra realizada :(
+        </p>
+        <button class="botao">COMPRAR</button>
+    </section>
+</body>
+<%- include('./repeat_views/footer'); %>
+</html>
