@@ -1,0 +1,56 @@
+.page-container{
+
+    padding: 10% 10% 5% 10%;
+
+}
+
+/* Imagens do produto - Products images */
+
+.img-desc-container{
+    display: flex;
+}
+
+.img-desc-container section{
+    display: flex;
+}
+
+.tumbs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+.picture{
+    border: 1px solid red; /* temporario */
+    width: 400px;
+    height: 400px;
+}
+
+.mini-img{
+    border: 1px solid red; /* temporario */
+    width: 80px;
+    height: 80px;
+}
+
+/* Pré Descrição - Previous Description */
+
+h3{
+    margin: 0;
+}
+.pre-description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+}
+
+form a img{
+    border: 1px solid red; /* temporario */
+    width: 30px;
+    height: 30px;
+}
