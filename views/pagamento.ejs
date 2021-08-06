@@ -7,9 +7,12 @@
     <title>SAFE PAYMENT</title>
     <link rel="stylesheet" href="css/pagamento.css">
 </head>
+
 <body>
-    
-    <img src="images/pagmento.jpg" alt="Cartão pagando">
+    <!-- <div class="page-container"> -->
+    <%- include('./repeat_views/header'); %>
+    <div class="page-container">
+    <img class= "cartao" src="images/pagmento.jpg" alt="Cartão pagando">
    
     <p>
         Argumento sobre qualidade da loja/marca lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum 
@@ -49,6 +52,8 @@
             lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
         </div>
     </section>
-
+    </div>
+    <%- include('./repeat_views/footer'); %>
+    <!-- </div> -->
 </body>
 </html>
