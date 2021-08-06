@@ -10,6 +10,7 @@ router.get('/', IndexController.home)
 router.get('/loja', ShopController.shop)
 router.get('/produto', ProductController.product)
 router.get('/pagamento', PagamentoController.payment)
+router.get('/checkout', PagamentoController.checkout)
 router.get('/minhaconta', MinhaContaController.myAccount)
 
 module.exports = router;

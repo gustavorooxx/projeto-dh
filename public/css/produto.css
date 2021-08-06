@@ -6,11 +6,11 @@
 
 /* Imagens do produto - Products images */
 
-.img-desc-container{
+.img-predesc-container{
     display: flex;
 }
 
-.img-desc-container section{
+.img-predesc-container section{
     display: flex;
 }
 
@@ -44,13 +44,63 @@ h3{
     margin-left: 5%;
 }
 
+.valor{
+    margin: 10px 0px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.pre-description span{
+    font-size: 12px;
+}
+
 form{
     display: flex;
     align-items: center;
 }
 
-form a img{
-    border: 1px solid red; /* temporario */
-    width: 30px;
-    height: 30px;
+form input{
+    margin: 0% 1% 0% 1%;
+    width: 7.5%;
+}
+
+form button{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    height: 35px;
+    border: 0;
+    border-radius: 10px;
+}
+
+form button img{
+    height: 20px;
+}
+
+/* Botões Descrição e informações adicionais e infos */
+
+.buttons{
+    display: flex;
+    margin-top: 5%;
+}
+
+.btn-description{
+    border: 1px solid #000;
+    width: 10%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.btn-moreInfo{
+    border: 1px solid #000;
+    width: 20%;
+    text-align: center;
+}
+
+.infos{
+    margin: 2% 0% 5% 0;
 }
