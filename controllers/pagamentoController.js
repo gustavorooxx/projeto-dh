@@ -1,11 +1,7 @@
 const PagamentoController = {
-    payment: (req, res) => {
+    show: (req, res) => {
         res.render('pagamento')
-    },
-
-    checkout: (req, res) => {
-        res.render('checkout')
-    }
+    }  
 }
 
 module.exports = PagamentoController;

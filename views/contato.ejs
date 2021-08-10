@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="css/contato.css">
+  </head>
+
+  <%- include('./repeat_views/header'); %>
+
+  <body>
+    
+  <div class="page-container">
+
+    <div class="left-container">
+      <h2>CONTATO</h2>
+    
+      <p>Envie sua dúvida, te responderemos em até 24hrs úteis.</p>
+      <p>Rua Lorem Ipsum, 1250 - SP, Capital</p>
+      <p>Segunda à sexta: 09am às 18pm</p>
+      <p>suporte@suporte.com.br</p>
+      <p>(11) 99999-9999</p>
+    
+
+    <div class="social-medias">
+      <img class="social-imgs" src="images/facebook.png" alt="">
+      <img class="social-imgs" src="images/instagram.png" alt="">
+    </div>
+
+    <img class="vector" src="images/contato-img.png" alt="">
+
+    </div>
+
+    <div class="right-container">
+    <form action="">
+      <input class="contato-input" placeholder="Nome Completo*" type="text" name="nome" id="nome">
+      <input class="contato-input" placeholder="E-mail*" type="email" name="email" id="email">
+      <input class="contato-input" placeholder="Celular*" type="tel" name="celular" id="celular">
+      <textarea placeholder="Escreva sua mensagem" name="msg" id="msg" cols="30" rows="10"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    </div>
+
+  </div>  
+  </body>
+
+  <%- include('./repeat_views/footer'); %>
+</html>

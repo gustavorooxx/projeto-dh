@@ -1,5 +1,5 @@
 const ShopController = {
-    shop: (req, res) => {
+    show: (req, res) => {
         res.render('shop');
     }
 }

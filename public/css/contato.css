@@ -1,0 +1,84 @@
+.page-container{
+
+    padding: 10% 10% 5% 10%;
+    display: flex;
+}
+
+h2{
+    margin: 0px 0px 15px 0px;
+}
+
+p{
+    margin: 0px 0px 2px 0px;
+    font-size: 14px;
+    color: #939393;
+}
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-medias{
+    margin-top: 15px;
+}
+
+.social-imgs{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.vector{
+    width: 65%;
+}
+
+.right-container{
+    flex-grow: 0.8;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-input{
+    height: 45px;
+    border: 1px solid #939393;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 3%;
+    
+}
+
+.contato-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #fff inset;
+    -webkit-text-fill-color: #000 !important;
+    border: 1px solid #939393;
+}
+
+.contato-input:focus-visible{
+    outline: none;
+}
+
+textarea{
+    margin-bottom: 10px;
+    padding: 10px;
+    resize: vertical;
+}
+
+textarea:focus-visible{
+    outline: none;
+}
+
+button{
+    width: 20%;
+    height: 40px;
+    background-color: #003884;;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer; 
+}
+

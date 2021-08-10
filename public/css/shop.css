@@ -55,7 +55,7 @@ input[type="number"]{
 .apply{
     width: 50%;
     height: 25px;
-    background-color: #000;
+    background-color: #003884;;
     border: 0;
     border-radius: 5px;
     color: #fff;
@@ -90,6 +90,7 @@ input[type="number"]{
 
 p{
     font-weight: bold;
+    cursor: pointer;
 }
 
 span{
@@ -99,7 +100,7 @@ span{
 
 .pagination-container{
     display: flex;
-    padding: 10% 10% 5% 60%;
+    padding: 1% 10% 5% 60%;
 }
 
 .pagination-container nav{
@@ -135,5 +136,6 @@ span{
 img{
     width: 100%;
     height: 100%;
+    cursor: pointer;
     border: 1px solid red;
 }

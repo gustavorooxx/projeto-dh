@@ -1,0 +1,35 @@
+.page-container{
+
+    padding: 10% 10% 5% 10%;
+    display: flex;
+}
+
+.page-container img{
+    width: 400px;
+    height: 300px;
+    margin-right: 10%;
+}
+
+/* Botões Descrição e informações adicionais e infos */
+
+.buttons{
+    display: flex;
+}
+
+.btn-sobre{
+    border: 1px solid #000;
+    width: 20%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.btn-socialmedia{
+    border: 1px solid #000;
+    width: 30%;
+    text-align: center;
+}
+
+.infos{
+    margin: 2% 0% 5% 0;
+}
