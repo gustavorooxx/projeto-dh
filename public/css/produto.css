@@ -22,15 +22,15 @@
 }
 
 .picture{
-    border: 1px solid red; /* temporario */
     width: 400px;
     height: 400px;
+    object-fit: cover;
 }
 
 .mini-img{
-    border: 1px solid red; /* temporario */
     width: 80px;
     height: 80px;
+    object-fit: cover;
 }
 
 /* Pré Descrição - Previous Description */
@@ -60,12 +60,12 @@ form{
 }
 
 form input{
-    margin: 0% 1% 0% 1%;
+    margin: 0% 5% 0% 1%;
     width: 7.5%;
 }
 
 form button{
-    background-color: black;
+    background-color: #003884;
     color: white;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@ form button img{
     border: 1px solid #000;
     width: 10%;
     text-align: center;
-    background-color: black;
+    background-color: #003884;
     color: white;
 }
 
