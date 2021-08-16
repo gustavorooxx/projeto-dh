@@ -36,7 +36,7 @@ h2{
 }
 
 
-.page-container section .bannerx2 article{
+section .bannerx2 article{
     height: 200px;
 }
 
@@ -45,6 +45,10 @@ h2{
     flex-direction: column;
     align-items: center;
     margin-bottom: 5%;
+}
+
+.mid-text p{
+    text-align: center;
 }
 
 h3{
@@ -85,4 +89,40 @@ img{
     object-fit: cover;
 }
 
+/* Mobile */
+
+@media (max-width: 480px) {
+    .page-container {
+        padding: 30% 10% 5% 10%;
+    }
+
+    .section1 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .banner {
+        /* height: 450px; */
+        width: 100%;
+    }
+
+    .bannerx2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section .bannerx2 article {
+        /* height: 200px; */
+        margin-top: 20px;
+    }
+
+    .section2 article {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 35%;
+        cursor: pointer;
+    }
+}
 
