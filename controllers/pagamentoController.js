@@ -1,7 +1,7 @@
 const PagamentoController = {
-    payment: (req, res) => {
+    show: (req, res) => {
         res.render('pagamento')
-    }
+    }  
 }
 
 module.exports = PagamentoController;

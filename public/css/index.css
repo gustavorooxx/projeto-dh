@@ -1,11 +1,9 @@
 .page-container{
-
     padding: 10% 10% 5% 10%;
-
 }
 
 h2{
-    text-transform: uppercase;
+    margin-top: 0;
 }
 
 .section1{
@@ -13,11 +11,22 @@ h2{
     justify-content: space-between;
 }
 
+.section1 article{
+    cursor: pointer;
+}
+
 .banner{
-    border: 1px solid #000; /* temporario */
-    height: 500px;
+    height: 450px;
     width: 70%;
 }
+
+.text-banner{
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    padding: 20px;
+}
+
 
 .bannerx2{
     display: flex;
@@ -26,15 +35,20 @@ h2{
     width: 25%;
 }
 
-.page-container section .bannerx2 article{
-    border: 1px solid #000; /* temporario */
-    height: 44.5%;
+
+section .bannerx2 article{
+    height: 200px;
 }
 
 .mid-text{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5%;
+}
+
+.mid-text p{
+    text-align: center;
 }
 
 h3{
@@ -48,10 +62,10 @@ h3{
 }
 
 .section2 article{
-    border: 1px solid;
     width: 30%;
-    height: 400px;
+    height: 200px;
     margin-bottom: 10%;
+    cursor: pointer;
 }
 
 .section2 article div{
@@ -69,11 +83,100 @@ h3{
     color: #939393;
 }
 
-/* temporario */
 img{
-    border: 1px solid red; /* temporario */
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
+/* Responsive */
+
+@media (max-width: 1230px) {
+    .page-container{
+    padding: 12% 10% 5% 10%;
+}
+}
+
+@media (max-width: 1240px){
+
+    .page-container {
+        padding: 12% 10% 5% 10%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-container{
+    padding: 14% 10% 5% 10%;
+}
+
+    .section2 article{
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width: 820px) {
+    .page-container{
+    padding: 16% 10% 5% 10%;
+}
+}
+
+@media (max-width: 768px) {
+    .page-container{
+    padding: 18% 10% 5% 10%;
+}
+
+.section2 article{
+    margin-bottom: 17%;
+    width: 45%;
+}
+}
+
+@media (max-width: 668px) {
+    .page-container{
+    padding: 20% 10% 5% 10%;
+}
+}
+
+@media (max-width: 520px) {
+    .page-container {
+        padding: 25% 10% 5% 10%;
+    }
+
+    .section1 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .bannerx2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section .bannerx2 article {
+        /* height: 200px; */
+        margin-top: 20px;
+    }
+
+    .section2 article {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 35%;
+        cursor: pointer;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+
+    .page-container {
+        padding: 30% 10% 5% 10%;
+    }
+}
 

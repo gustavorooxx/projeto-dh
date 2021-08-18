@@ -1,5 +1,5 @@
 const MinhaContaController = {
-    myAccount: (req, res) => {
+    show: (req, res) => {
         res.render('minhaConta')
     }
 }
