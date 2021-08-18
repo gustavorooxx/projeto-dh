@@ -11,6 +11,9 @@ html, body{
     max-width: 100%;
 }
 
+.page-container{
+    min-height: 100%;
+}
 
 /* CSS HEADER */
 header {
@@ -214,7 +217,7 @@ header div nav ul li span {
 footer{
     background-color: #000;
     color: #fff;
-    width: 100%;
+    width: 100vw;
 }
 
 footer .container{
