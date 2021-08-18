@@ -4,12 +4,11 @@
     
 }
 
-body{
+html, body{
     margin: 0;
     padding: 0;
     height: 100%;
     max-width: 100%;
-    /* overflow-x: hidden; */
 }
 
 
@@ -101,6 +100,72 @@ header div nav ul li span {
     font-size: 12px;
 }
 
+/* Responsive header*/
+
+.icon{
+    display: none !important;
+}
+
+#myLinks{
+    display: none;
+    background-color: black;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#myLinks a{
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+}
+
+.icon{
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    display: block;
+}
+
+.icon i {
+    margin-left: 90%;
+}
+
+
+
+@media (max-width: 1230px){
+    
+    .icon{
+        display: block !important;
+    }
+    .top-nav{
+        display: none;
+    }
+    #myLinks{
+        padding: 10% 10% 5% 10%;
+    }
+    
+}
+
+@media (max-width: 680px){
+
+    #myLinks{
+        padding: 15% 10% 5% 10%;
+    }
+}
+
+@media (max-width: 480px) {
+
+   .icon{
+       display: block !important;
+   }
+
+    #myLinks{
+        padding: 20% 10% 5% 10%;       
+    }       
+
+}
+
 /* CSS FOOTER */
 
 footer{
@@ -146,4 +211,15 @@ footer div a {
     border-top: 1px solid #939393ab;
 }
 
+/* Responsive footer */
 
+@media (max-width: 768px) {
+    footer .container{
+        padding: 3% 10% 10% 10%;
+        flex-direction: column;
+}
+    footer .container div{
+        align-items: center;
+    }
+    
+}
