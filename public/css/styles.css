@@ -131,6 +131,32 @@ header div nav ul li span {
     margin-left: 90%;
 }
 
+#myLinks form{
+    margin-top: 15px;
+}
+
+#myLinks ul{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100vw;
+    margin: 20% 0% 2% 0%;
+    padding: 0% 5%;
+}
+
+#myLinks ul li a {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#myLinks ul li a span {
+    color: #939393;
+    margin-left: 5%;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 
 
 @media (max-width: 1230px){
@@ -142,7 +168,7 @@ header div nav ul li span {
         display: none;
     }
     #myLinks{
-        padding: 10% 10% 5% 10%;
+        padding: 10% 10% 1% 10%;
     }
     
 }
@@ -150,7 +176,7 @@ header div nav ul li span {
 @media (max-width: 680px){
 
     #myLinks{
-        padding: 15% 10% 5% 10%;
+        padding: 15% 10% 2% 10%;
     }
 }
 
@@ -161,8 +187,12 @@ header div nav ul li span {
    }
 
     #myLinks{
-        padding: 20% 10% 5% 10%;       
-    }       
+        padding: 20% 10% 1% 10%;       
+    }
+    
+    #myLinks ul{
+        margin: 20% 0% 5% 0%;
+    }
 
 }
 
