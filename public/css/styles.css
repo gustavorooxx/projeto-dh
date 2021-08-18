@@ -17,6 +17,7 @@ header {
     width: 100%;
     background-color: #000;
     position: fixed;
+    z-index: 1;
 }
 
 header .container {
@@ -112,6 +113,7 @@ header div nav ul li span {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    position: fixed;
 }
 
 #myLinks a{
@@ -170,6 +172,12 @@ header div nav ul li span {
     #myLinks{
         padding: 10% 10% 1% 10%;
     }
+
+    #myLinks ul{
+        border-top: 1px solid #93939361;
+        margin: 10% 0% 2% 0%;
+        padding: 3% 8% 0% 8%;
+    }
     
 }
 
@@ -177,6 +185,10 @@ header div nav ul li span {
 
     #myLinks{
         padding: 15% 10% 2% 10%;
+    }
+
+    #myLinks ul{
+        margin: 10% 0% 1% 0%;
     }
 }
 
@@ -192,6 +204,7 @@ header div nav ul li span {
     
     #myLinks ul{
         margin: 20% 0% 5% 0%;
+        padding: 6% 8% 0% 8%;
     }
 
 }
