@@ -4,7 +4,7 @@
     display: flex;
 }
 
-.page-container img{
+.logo-sobre{
     width: 400px;
     height: 300px;
     margin-right: 10%;
@@ -22,16 +22,41 @@
     text-align: center;
     background-color: #003884;
     color: white;
+    cursor: pointer;
 }
 
 .btn-socialmedia{
     border: 1px solid #000;
+    background-color: white;
+    color: black;
     width: 30%;
     text-align: center;
+    cursor: pointer;
 }
 
 .infos{
     margin: 2% 0% 5% 0;
+}
+
+#info1{
+    display: block;
+}
+
+#info2{
+    display: none;
+}
+
+.face{
+    width: 30%;
+    height: 30%;
+    margin-top: 5%;
+    margin-right: 2.5%;
+}
+
+.insta{
+    width: 15%;
+    height: 15%;
+    margin-top: 5%;
 }
 
 /* Responsive */
@@ -42,7 +67,7 @@
     flex-direction: column;
     align-items: center;
 }
-    .page-container img {
+    .logo-sobre {
         margin: 0;
     }
     .buttons {
@@ -83,7 +108,7 @@
     padding: 18% 10% 5% 10%;
 }
 
-    .page-container img{
+    .logo-sobre{
         width: 280px;
         height: 220px;
         margin: 0;
@@ -100,6 +125,19 @@
     .page-container {
         padding: 25% 10% 5% 10%;
     }
+
+    .face{
+        width: 35%;
+        height: 35%;
+        margin-right: 10%;
+    }
+    
+    .insta{
+        width: 20%;
+        height: 20%;
+    }
+
+
 }
 
 @media (max-width: 480px) {

@@ -14,34 +14,67 @@
     
   <div class="page-container">
       
-    <img src="images/sobre-logo.png" alt="">
+    <img class="logo-sobre" src="images/sobre-logo.png" alt="">
 
-    <!-- Botões descrição e informações adicionais -->
-<div>
+    <!-- Botões Sobre e Mídias Sociais -->
+<div style="width: 100%;">
     <div class="buttons">
-        <div class="btn-sobre"><h5>SOBRE</h5></div>
-        <div class="btn-socialmedia"><h5>MÍDIAS SOCIAIS</h5></div>
+        <div class="btn-sobre" id="btn-sobre" onclick="sobreBtn()"><h5>SOBRE</h5></div>
+        <div class="btn-socialmedia" id="btn-socialmedia" onclick="mediaBtn()"><h5>MÍDIAS SOCIAIS</h5></div>
     </div>
     <!-- Descrição/Informação Adicional -->
     <div class="infos">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
+        <p id="info1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
             Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis. 
             Maecenas ut tellus mi. Proin tincidunt, lectus eu volutpat mattis, ante metus lacinia tellus, vitae condimentum nulla enim bibendum nibh.
             Praesent turpis risus, interdum nec venenatis id, pretium sit amet purus. Interdum et malesuada fames.</p>
       
-        <!-- <p>
-         Peso	2 kg <br>
-         Dimensões	10 × 10 × 15 cm <br>
-         Cor	<br>
-         Rosa <br>
-         <br>
-         Material: Madeira</p> -->
+        <p id="info2" >
+        <a href="https://www.facebook.com"> <img class="face" src="images/facebook2.png" alt=""></a>
+        <a href="https://www.instagram.com"><img class="insta" src="/images/instagram2.png" alt=""></a>
+        </p>
                   
     </div>
 </div>
     
 
-  </div>  
+  </div>
+
+
+<!-- Script Btn -->
+<script>
+    function mediaBtn() {
+
+      var btnSobre = document.getElementById("btn-sobre");
+      var btnMedia = document.getElementById("btn-socialmedia")
+      var infoSobre = document.getElementById("info1")
+      var infoMedia = document.getElementById("info2")
+
+      btnSobre.style.backgroundColor = "white"
+      btnSobre.style.color = "black"
+      btnMedia.style.backgroundColor = "#003884"
+      btnMedia.style.color = "white"
+      infoSobre.style.display = "none"
+      infoMedia.style.display = "block"
+    }
+
+    function sobreBtn() {
+
+      var btnSobre = document.getElementById("btn-sobre");
+      var btnMedia = document.getElementById("btn-socialmedia")
+      var infoSobre = document.getElementById("info1")
+      var infoMedia = document.getElementById("info2")
+
+      btnMedia.style.backgroundColor = "white"
+      btnMedia.style.color = "black"
+      btnSobre.style.backgroundColor = "#003884"
+      btnSobre.style.color = "white"
+      infoSobre.style.display = "block"
+      infoMedia.style.display = "none"
+}
+</script>
+
+
   </body>
 
   <%- include('./repeat_views/footer'); %>
