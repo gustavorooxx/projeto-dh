@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+
     <header>
         <div class="container">
             <a href="/"><img class="logo" src="images/logo-provisorio.png" alt=""></a>
@@ -18,10 +20,10 @@
             <ul>
                 <li><a href="/loja">Comprar</a></li>
                 <li><a href="/contato">Contato</a></li>
-                <li><a href="/sobre-nos">Sobre nós</a></li>
+                <li><a href="/sobre-nos">Sobre</a></li>
                 
                 <form action="">
-                <li><input type="text" name="search" id="search"> 
+                <li><input placeholder="O que você procura?" type="text" name="search" id="search"> 
                 <img class="loupe" src="images/loupe.png" alt=""> </li>
                 </form>    
                 
@@ -40,9 +42,21 @@
     <div id="myLinks">
         <a href="/loja">Comprar</a>
         <a href="/contato">Contato</a>
-        <a href="/sobre-nos">Sobre nós</a>
-      </div>
+        <a href="/sobre-nos">Sobre</a>
 
+        <form action="">
+            <li><input placeholder="O que você procura?" type="text" name="search" id="search"> 
+            <img class="loupe" src="images/loupe.png" alt=""> </li>
+        </form> 
+
+        <ul>
+           <li><a href=""><i class="fas fa-shopping-cart"></i> <span>(R$100,00)</span></a></li>
+           <li><a href=""><i class="fas fa-user"></i> <span>Entrar/Registrar</span></a></li>
+           <li><a href=""><i class="fas fa-sign-out-alt"></i> <span>Sair</span> </a></li> 
+        </ul>
+
+    </div>
+   
     <script>
         function myFunction() {
           var x = document.getElementById("myLinks");

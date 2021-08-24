@@ -50,27 +50,60 @@
         </div>
         <!-- Botões descrição e informações adicionais -->
         <div class="buttons">
-          <div class="btn-description"><h5>DESCRIÇÃO</h5></div>
-          <div class="btn-moreInfo"><h5>INFORMAÇÕES ADICIONAIS</h5></div>
+          <div class="btn-description" id="btn-description" onclick="descriptionBtn()"><h5>DESCRIÇÃO</h5></div>
+          <div class="btn-moreInfo" id="btn-moreInfo" onclick="moreInfoBtn()"><h5>INFORMAÇÕES ADICIONAIS</h5></div>
         </div>
         <!-- Descrição/Informação Adicional -->
         <div class="infos">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
+          <p id="description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
              Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis. 
              Maecenas ut tellus mi. Proin tincidunt, lectus eu volutpat mattis, ante metus lacinia tellus, vitae condimentum nulla enim bibendum nibh.
              Praesent turpis risus, interdum nec venenatis id, pretium sit amet purus. Interdum et malesuada fames.</p>
 
-             <!-- <p>
-              Peso	2 kg <br>
-              Dimensões	10 × 10 × 15 cm <br>
-              Cor	<br>
-              Rosa <br>
-              <br>
-              Material: Madeira</p> -->
+             <p id="moreInfo">
+              Peso: 2 kg <br>
+              Dimensões: 10 × 10 × 15 cm <br>
+              Cor: Rosa <br>
+              Material: Madeira</p>
             
         </div>
 
     </div>  
+
+
+    <!-- Script Btn -->
+<script>
+  function moreInfoBtn() {
+
+    var descriptionBtn = document.getElementById("btn-description");
+    var moreInfoBtn = document.getElementById("btn-moreInfo")
+    var descInfo = document.getElementById("description")
+    var moreInfo = document.getElementById("moreInfo")
+
+    descriptionBtn.style.backgroundColor = "white"
+    descriptionBtn.style.color = "black"
+    moreInfoBtn.style.backgroundColor = "#003884"
+    moreInfoBtn.style.color = "white"
+    descInfo.style.display = "none"
+    moreInfo.style.display = "block"
+  }
+
+  function descriptionBtn() {
+
+    var descriptionBtn = document.getElementById("btn-description");
+    var moreInfoBtn = document.getElementById("btn-moreInfo")
+    var descInfo = document.getElementById("description")
+    var moreInfo = document.getElementById("moreInfo")
+
+    moreInfoBtn.style.backgroundColor = "white"
+    moreInfoBtn.style.color = "black"
+    descriptionBtn.style.backgroundColor = "#003884"
+    descriptionBtn.style.color = "white"
+    descInfo.style.display = "block"
+    moreInfo.style.display = "none"
+}
+</script>
+
   </body>
 
   <%- include('./repeat_views/footer'); %>
