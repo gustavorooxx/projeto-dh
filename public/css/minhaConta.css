@@ -11,32 +11,38 @@ title{
 body{
  
     align-self: center;
-    /* margin-top: 10% ;
-    margin-bottom: 5%; */
-    /* background-color: rgb(143, 120, 31); */
-    /* flex-direction: row;
-    justify-content: space-between; */
-    /* padding: 10% 10% 5% 10%; */
+  
 }
+span{
+    align-self: center;
+
+}
+
 .usuario{
-    width: 30%;
-    height: 50%;
-    /* background-color: crimson; */
+   
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    
+}
+.lista{
+    align-self: center;
+    list-style: none;
+}
+.itemLista{
+    margin:5px;
+    text-decoration: none;
 }
 .compras{
     width: 60%;
     height: 5%;
     display: flex;
-    /* background-color: darkblue; */
     flex-direction: row;
     justify-content: space-between;
 }
 .paragrafo{
     width: 50%;
     text-align: right;
+    margin-top: 0;
 }
 
 .botao{
@@ -44,10 +50,14 @@ body{
     justify-content: center;
     align-items: center;
     width: 30%;
+    min-width: 100px;
     min-height: 20px;
     background-color: black;
     color:white;
 }
-.imagem-usuario{
+.fotoUsuario{
     height: 30%;
+    width: 100%;
+    border-radius: 50%;
+    min-height: 80px;
 }
