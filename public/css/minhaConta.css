@@ -1,36 +1,35 @@
-*{
+.page-container{
+
+    padding: 100px 10% 5% 10%;
     display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-}
-html{
-    height: 100%;
-    width: 100%;
+    flex-direction: row;
+    height: 80vh;
 }
 title{
     display: none;
 }
 body{
-    width: 80%;
-    height: 85%;
+ 
     align-self: center;
-    margin-top: 10% ;
-    margin-bottom: 5%;
+    /* margin-top: 10% ;
+    margin-bottom: 5%; */
     /* background-color: rgb(143, 120, 31); */
-    flex-direction: row;
-    justify-content: space-between;
+    /* flex-direction: row;
+    justify-content: space-between; */
     /* padding: 10% 10% 5% 10%; */
 }
 .usuario{
     width: 30%;
-    height: 100%;
+    height: 50%;
     /* background-color: crimson; */
+    display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 .compras{
     width: 60%;
     height: 5%;
+    display: flex;
     /* background-color: darkblue; */
     flex-direction: row;
     justify-content: space-between;
@@ -48,4 +47,7 @@ body{
     min-height: 20px;
     background-color: black;
     color:white;
+}
+.imagem-usuario{
+    height: 30%;
 }
