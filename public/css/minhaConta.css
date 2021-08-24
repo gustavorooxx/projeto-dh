@@ -17,7 +17,10 @@ span{
     align-self: center;
 
 }
-
+section li a{
+    color: #939393;
+    font-size: 13px;
+}
 .usuario{
    
     display: flex;
@@ -27,6 +30,7 @@ span{
 .lista{
     align-self: center;
     list-style: none;
+    
 }
 .itemLista{
     margin:5px;
