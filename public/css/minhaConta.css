@@ -3,7 +3,8 @@
     padding: 100px 10% 5% 10%;
     display: flex;
     flex-direction: row;
-    height: 80vh;
+    height: 80%;
+    
 }
 title{
     display: none;
@@ -50,14 +51,16 @@ section li a{
 }
 
 .botao{
-   
-    justify-content: center;
-    align-items: center;
-    width: 30%;
+    width: 20%;
+    height: 40px;
+    background-color: #003884;;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
     min-width: 100px;
-    min-height: 20px;
-    background-color: black;
-    color:white;
 }
 .fotoUsuario{
     height: 30%;
@@ -65,3 +68,4 @@ section li a{
     border-radius: 50%;
     min-height: 80px;
 }
+
