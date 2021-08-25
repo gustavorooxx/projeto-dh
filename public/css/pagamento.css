@@ -104,9 +104,9 @@ button{
         flex-direction: column;
         padding-top: 0px;
     }
-    /* .valor{
+    .valor{
         font-size: 0.8em;
-    } */
+    }
     button{
         width: 70%;
     }
@@ -119,7 +119,6 @@ button{
     }
      .valor{
          padding-top: 0px;
-        font-size: 0.8em;
     }
 
 }
