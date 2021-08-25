@@ -55,17 +55,16 @@ section {
     justify-content: space-between;
     margin-top: 5px;
     height: 30%;
-    /* vertical-align:middle; */
+    
 }
 .informacoes-produto{
     display: flex;
     justify-content: space-around;
     width: 80%;
-    /* flex-wrap: wrap; */
+  
     
     padding-top: 35px;
-    /* height: 100%; */
-    /* vertical-align:middle; */
+  
 }
   
 .comentarios{
@@ -98,15 +97,26 @@ button{
 }
 /* Responsive */
 
+@media (max-width: 1637px){
+    .valor{
+        padding-top: 1px;
+        width: 18%;
+    }
+}
+
+@media (max-width: 1494px){
+    .valor{
+        font-size: 0.8em;
+    }
+}
+
 @media (max-width: 1024px){
     .informacoes-produto{
         display: flex;
         flex-direction: column;
         padding-top: 0px;
     }
-    .valor{
-        font-size: 0.8em;
-    }
+ 
     button{
         width: 70%;
     }
@@ -117,8 +127,5 @@ button{
     button{
         width: 60%;
     }
-     .valor{
-         padding-top: 0px;
-    }
-
+  
 }
