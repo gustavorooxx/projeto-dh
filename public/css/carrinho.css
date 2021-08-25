@@ -14,13 +14,15 @@
 }
 
 section{
-    /* display: flex; */
+    display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 
 article{
     display: flex; 
     justify-content: space-between;
+    width: 50%;
     /* flex-wrap: wrap; */
 }
 
@@ -29,10 +31,13 @@ label{
 }
 
 .compras{
+    display: flex;
+    justify-content: space-between;
     width: 65%;
+    flex-wrap: wrap;
 }
 
-.produtos{
+.produto{
     display: flex;
 }
 
@@ -41,17 +46,22 @@ label{
     min-width:100px ;
 }
 
-.nomeProduto{
-    padding-top: 40%; 
-}
-
-.preco{
+.informacoesProduto{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
     padding-top: 35px;
 }
 
 .quantidade{
     display: flex;
-    /* width: auto; */
+    width: 45%;
+    justify-content: space-between;
+
+}
+
+.altera-quantidade{
+    display: flex;
 }
 
 .contador{
@@ -63,3 +73,84 @@ label{
     width: 25%;
     padding-top: 35px;
 }
+
+.carrinho{
+    background-color:  rgb(212, 208, 208);
+    width: 30%;
+}
+
+/* responsive */
+
+
+/* @media (max-width: 1420px){
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+/* @media (max-width: 1240px){
+
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+
+@media (max-width: 1024px){
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 860px) {
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 820px) {
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 668px) {
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .compras{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+
+   .compras{
+       display: flex;
+       flex-direction: column;
+   }
+}
+
