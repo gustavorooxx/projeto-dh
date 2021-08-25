@@ -9,15 +9,41 @@
   </head>
 
   <%- include('./repeat_views/header'); %>
-
+  <div class="page-container">
   <body>
     
-  <div class="page-container">
+  
+    <img class="fotoCabeceira" src="images/carrinho.jpg" alt="fotoPageCart">
+    <h2>SHOPPING CART</h2>
+    
+      <section>
+        <div class="compras">
+          <article>
+            <div class="produto">
+              <img class="img-produto" src="/images/produtos/cadeira-anatomica.jpg" alt="">
+              <div>
+                <span class="nomeProduto">Cadeira Anatômica</span>
+                <span class="preco">R$189,00</span>
+              </div>
+            </div>  
+            <div class="quantidade">
+              <label>Quantidade:</label>  
+              <div class="contador">  
+                <input type="button" id="plus" value='-' onclick="process(-1)" />
+                <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
+                <input type="button" id="minus" value='+' onclick="process(1)">
+              </div> 
+              <span class="valorTotal">R$189,00</span>
+            </div> 
+          </article>
+        </div>
+        <div>
 
-
-  </div>  
+        </div>
+      </section>
+  
 
   </body>
-
+</div>  
   <%- include('./repeat_views/footer'); %>
 </html>
