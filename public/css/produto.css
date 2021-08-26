@@ -89,18 +89,26 @@ form button img{
 }
 
 .btn-description{
-    border: 1px solid #000;
-    width: 10%;
-    text-align: center;
-    background-color: #003884;
+    border-right: none;
+    border-radius: 10px 0px 0px 10px;
+    width: 15%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    cursor: pointer;
+    background-color: #003884;
+    cursor:pointer;
 }
 
 .btn-moreInfo{
-    border: 1px solid #000;
-    width: 20%;
-    text-align: center;
+    border: 1px solid #575757;
+    border-radius: 0px 10px 10px 0px;
+    width: 25%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -151,14 +159,6 @@ form button img{
         margin-top: 5%;
     }
 
-    .btn-description{
-        width: 20%;
-    }
-
-    .btn-moreInfo{
-        width: 30%;
-    }
-
 }
 
 
@@ -167,6 +167,16 @@ form button img{
     .page-container{
     padding: 14% 10% 5% 10%;
     }
+
+    .btn-description{
+        width: 30%;
+        height: 30px
+    }
+
+    .btn-moreInfo {
+        width: 70%;
+        height: 30px;
+    }
 }
 
 @media (max-width: 820px) {
@@ -174,15 +184,12 @@ form button img{
     padding: 16% 10% 5% 10%;
     
     }
+
 }
 
 @media (max-width: 768px) {
     .page-container{
     padding: 18% 10% 5% 10%;
-    }
-
-    .btn-moreInfo {
-        width: 35%;
     }
 }
 
@@ -194,11 +201,6 @@ form button img{
     form button {
         width: 45%;
     }
-
-    .btn-moreInfo {
-        width: 45%;
-    }
-
     .mini-img {
         width: 70px;
         height: 70px;
@@ -224,14 +226,6 @@ form button img{
     form button {
         width: 60%;
     }
-
-    .btn-description{
-        width: 25%;
-    }
-
-    .btn-moreInfo {
-        width: 50%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -247,13 +241,5 @@ form button img{
     .picture {
         width: 85%;
         height: 100%;
-    }
-
-    .btn-description {
-        width: 45%;
-    }
-
-    .btn-moreInfo {
-        width: 80%;
     }
 }
