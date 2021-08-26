@@ -27,7 +27,7 @@
           </article>
           <div class="quantidade">
             <div class="altera-quantidade">
-              <label>Quantidade:</label>  
+              <label class="label-quantidade">Quantidade:</label>  
               <div class="contador">  
                 <input type="button" id="plus" value='-' onclick="process(-1)" />
                 <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
@@ -37,10 +37,32 @@
            
             <span class="valorTotal">R$189,00</span>
           </div> 
+          <a class="comprar-mais" href="../views/shop.ejs">Go back to shopping</a>
          
         </div>
         <div class="carrinho">
-          <h2>CART TOTALS</h2>
+          <h2 class="titulo-carrinho">CART TOTALS</h2>
+          <form class="entrega"action="">
+            <div class="forma-entrega">
+              <label class='entrga-escolhida' for="entrega">Free shipping</label>
+              <input type="checkbox" name="entrega">
+            </div>
+            <div class="forma-entrega">
+              <label class='entrga-escolhida' for="entrega">Pickup local</label>
+              <input type="checkbox" name="entrega">
+            </div>
+            <div class="forma-entrega">
+              <label class='entrga-escolhida' for="entrega">Flate rate R$10</label>
+              <input type="checkbox" name="entrega">
+            </div>
+          </form>
+          <h3>Change shipping</h3>
+          <div class="valor-carrinho">
+            <span>TOTAL</span>
+            <span>R$189,00</span>
+          </div>
+          <button class="prosseguir">PROCEED TO CHECKOUT</button>
+          
 
 
         </div>

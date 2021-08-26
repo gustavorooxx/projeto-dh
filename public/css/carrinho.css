@@ -26,8 +26,9 @@ article{
     /* flex-wrap: wrap; */
 }
 
-label{
+.label-quantidade{
     padding-top: 35px;
+    color:#939393;
 }
 
 .compras{
@@ -44,6 +45,7 @@ label{
 .img-produto{
     width: 10%;
     min-width:100px ;
+    height: 80px;
 }
 
 .informacoesProduto{
@@ -84,9 +86,59 @@ label{
     padding-top: 35px;
 }
 
+.comprar-mais{
+    color:#939393;
+}
+
 .carrinho{
-    background-color:  rgb(212, 208, 208);
+    display: flex;
+    flex-direction: column ;
+    background-color: rgb(240, 238, 238) ;
     width: 30%;
+    align-items: center;
+    /* text-align: center; */
+}
+.titulo-carrinho{
+    text-align: center;
+}
+
+.entrega{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    /* width: 40%; */
+    /* min-width: 40%; */
+    /* margin-top: null; */
+    /* align-self: center; */
+}
+
+.forma-entrega{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color:#939393;
+}
+
+.valor-carrinho{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #939393;
+    width: 80%;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.prosseguir{
+    width: 90%;
+    height: 40px;
+    background-color: #003884;;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer; 
 }
 
 /* responsive */
@@ -96,5 +148,8 @@ label{
         display: flex;
         flex-direction: column;
     }
+}
+@media (max-width: 1024px){
+
 }
 
