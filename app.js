@@ -13,6 +13,7 @@ var cartRouter = require('./routes/carrinho')
 var myAccountRouter = require('./routes/minhaConta')
 var paymentRouter = require('./routes/pagamento')
 var checkoutRouter = require('./routes/checkout')
+var loginRouter = require('./routes/login')
 
 var usersRouter = require('./routes/users');
 
@@ -38,6 +39,7 @@ app.use('/', cartRouter)
 app.use('/', myAccountRouter)
 app.use('/', paymentRouter)
 app.use('/', checkoutRouter)
+app.use('/', loginRouter)
 
 app.use('/users', usersRouter);
 

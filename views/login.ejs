@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+
+  <body>
+    
+<div class="page-container">    
+
+    <img src="images/logo-login.png" alt="">
+    
+    <div class="form-container">
+        <div class="buttons">
+            <div class="btn-login" id="btn-login" onclick="loginBtn()"><h5>LOGIN</h5></div>
+            <div class="btn-register" id="btn-register" onclick="registerBtn()"><h5>REGISTRO</h5></div>
+        </div>
+  
+        <form id="loginForm" action="">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password">
+                <div class="rememberPass"><input type="checkbox" name="rememberPass" id="rememberPass"> <span>Lembrar-me</span></div>
+                <div><a href="">Esqueceu sua senha? Clique aqui.</a></div>
+                <button type="submit">Login</button>
+        </form>
+   
+        <form id="registerForm" action="">
+                <p>Preencha seus dados!</p>
+                <input placeholder="Nome Completo" type="text" name="nome" id="nome">
+                <input placeholder="E-mail" type="email" name="email" id="email">
+                <input placeholder="Senha" type="password" name="password" id="password">
+                <input placeholder="Confirme sua senha" type="password" name="password" id="password">
+                <button type="submit">CADASTRAR</button>
+        </form>
+    </div>   
+</div>
+
+<script>
+
+    function loginBtn(){
+
+        var btnLogin = document.getElementById('btn-login')
+        var btnRegister = document.getElementById('btn-register')
+        var loginForm = document.getElementById('loginForm')
+        var registerForm = document.getElementById('registerForm')
+
+        btnLogin.style.backgroundColor = "#003884"
+        btnLogin.style.color = "white"
+        btnLogin.style.border = "1px solid #003884"
+
+        btnRegister.style.backgroundColor = "white"
+        btnRegister.style.border = "none"
+        btnRegister.style.color = "#000"
+
+        registerForm.style.display = "none"
+        loginForm.style.display = "flex"
+    }
+
+    function registerBtn(){
+
+        var btnLogin = document.getElementById('btn-login')
+        var btnRegister = document.getElementById('btn-register')
+        var loginForm = document.getElementById('loginForm')
+        var registerForm = document.getElementById('registerForm')
+
+        btnRegister.style.backgroundColor = "#003884"
+        btnRegister.style.color = "white"
+        btnRegister.style.border = "1px solid #003884"
+
+        btnLogin.style.backgroundColor = "white"
+        btnLogin.style.border = "none"
+        btnLogin.style.color = "#000"
+
+        loginForm.style.display = "none"
+        registerForm.style.display = "flex"
+        
+
+        
+    }
+    
+
+
+</script>
+    
+    
+  </body>
+
+</html>
