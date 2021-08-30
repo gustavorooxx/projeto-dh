@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .page-container{
 
     padding: 10% 10% 5% 10%;
@@ -124,6 +128,14 @@
     margin-top: 25px;
 }
 
+.back-shop{
+    cursor: pointer;
+}
+
+.back-shop-icon{
+    margin-right: 1%;
+}
+
 /* Responsive */
 
 @media (max-width: 1240px){
@@ -148,7 +160,9 @@
 
     .back-shop{
         margin-top: 5%;
+        cursor: pointer;
     }
+
 
 }
 

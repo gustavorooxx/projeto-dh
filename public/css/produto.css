@@ -62,6 +62,7 @@ form{
 form input{
     margin: 0% 5% 0% 1%;
     width: 7.5%;
+    outline: none;
 }
 
 form button{
