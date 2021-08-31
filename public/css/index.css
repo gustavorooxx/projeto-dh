@@ -60,7 +60,7 @@ section .bannerx2 article{
 
 }
 
-h3{
+.mid-text h3{
     margin-top: 5%;
 }
 
@@ -169,6 +169,13 @@ img{
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+
+    .mid-text{
+        margin-bottom: 15%;
+    }
+    .mid-text h3 {
+        margin-top: 15%;
     }
 
     section .bannerx2 article {
