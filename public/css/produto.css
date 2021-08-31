@@ -4,6 +4,10 @@
 
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* Imagens do produto - Products images */
 
 .img-predesc-container{
@@ -115,6 +119,7 @@ form button img{
 
 .infos{
     margin: 2% 0% 5% 0;
+    line-height: 25px;
 }
 
 #moreInfo{

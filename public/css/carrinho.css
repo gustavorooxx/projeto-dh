@@ -33,6 +33,7 @@ body{
 .product{
     display: flex; 
     align-items: center;
+    height: 15%;
 }
 
 .product-name{
@@ -45,8 +46,22 @@ body{
 }
 
 .quantidade{
-    font-size: 14px;
+    font-size: 12px;
     color: #939393;
+    width: 10%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantidade input{
+    width: 85%;
+    outline: none;
+    margin-top: 5px;
+    border: 1px solid #939393;
+    border-radius: 2px;
+    text-align: center;
 }
 
 .cart-total{
@@ -63,6 +78,8 @@ body{
 
 .cart-total h3{
     text-align: center;
+    font-weight: 400;
+    text-decoration-line: underline;
 }
 
 .cart-total p {
@@ -218,6 +235,10 @@ body{
     .back-shop {
         margin-top: 10%;
         margin-bottom: 10%;
+    }
+
+    .quantidade input{
+        width: 100%;
     }
 }
 
