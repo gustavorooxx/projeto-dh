@@ -135,3 +135,19 @@ button{
         margin-left: 20px;
     }
 }
+
+@media (max-width: 680px){
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pagamento{
+        width: 100%;
+    }
+    
+    .comentarios{
+        width: 100%
+      
+    }
+}
