@@ -14,54 +14,21 @@ body{
     margin-right: 10%;
 }
 
-/* Botões Descrição e informações adicionais e infos */
-
-.buttons{
-    display: flex;
-}
-
-.btn-sobre{
-    border: 1px solid #000;
-    width: 20%;
-    text-align: center;
-    background-color: #003884;
-    color: white;
-    cursor: pointer;
-}
-
-.btn-socialmedia{
-    border: 1px solid #000;
-    background-color: white;
-    color: black;
-    width: 30%;
-    text-align: center;
-    cursor: pointer;
-}
 
 .infos{
     margin: 2% 0% 5% 0;
 }
 
 #info1{
-    display: block;
+    line-height: 25px;
 }
 
-#info2{
-    display: none;
+.social-medias img {
+    margin-top: 3%;
+    margin-right: 4%;
+    width: 5.5%;
 }
 
-.face{
-    width: 30%;
-    height: 30%;
-    margin-top: 5%;
-    margin-right: 2.5%;
-}
-
-.insta{
-    width: 15%;
-    height: 15%;
-    margin-top: 5%;
-}
 
 /* Responsive */
 
@@ -74,16 +41,7 @@ body{
     .logo-sobre {
         margin: 0;
     }
-    .buttons {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .infos {
-        text-align: center;
-        line-height: 30px;
-    }
-    
+   
 }
 
 @media (max-width: 1240px){
@@ -129,18 +87,6 @@ body{
         padding: 25% 10% 5% 10%;
     }
 
-    .face{
-        width: 35%;
-        height: 35%;
-        margin-right: 10%;
-    }
-    
-    .insta{
-        width: 20%;
-        height: 20%;
-    }
-
-
 }
 
 @media (max-width: 480px) {
@@ -149,11 +95,15 @@ body{
         padding: 30% 10% 5% 10%;
     }
 
-    .btn-sobre{
-        width: 30%;
+    .logo-sobre {
+        width: 200px;
+        height: 160px;
     }
 
-    .btn-socialmedia{
-        width: 55%;
+    .social-medias img {
+        margin-top: 5%;
+        margin-right: 5%;
+        width: 12%;
     }
+
 }

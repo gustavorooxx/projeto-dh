@@ -50,9 +50,8 @@ body{
     font-size: 15px;
 }
 
-.btn-login{
+.btn-register{
     background-color: #003884;
-    border: 1px solid #003884;
     color: white;
 }
 

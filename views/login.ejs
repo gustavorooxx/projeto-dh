@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
     <link rel="stylesheet" href="css/login.css">
+    <script src="javascripts/login.js"></script>
   </head>
 
   <body>
@@ -40,55 +41,7 @@
         </form>
     </div>   
 </div>
-
-<script>
-
-    function loginBtn(){
-
-        var btnLogin = document.getElementById('btn-login')
-        var btnRegister = document.getElementById('btn-register')
-        var loginForm = document.getElementById('loginForm')
-        var registerForm = document.getElementById('registerForm')
-
-        btnLogin.style.backgroundColor = "#003884"
-        btnLogin.style.color = "white"
-        btnLogin.style.border = "1px solid #003884"
-
-        btnRegister.style.backgroundColor = "white"
-        btnRegister.style.border = "none"
-        btnRegister.style.color = "#000"
-
-        registerForm.style.display = "none"
-        loginForm.style.display = "flex"
-    }
-
-    function registerBtn(){
-
-        var btnLogin = document.getElementById('btn-login')
-        var btnRegister = document.getElementById('btn-register')
-        var loginForm = document.getElementById('loginForm')
-        var registerForm = document.getElementById('registerForm')
-
-        btnRegister.style.backgroundColor = "#003884"
-        btnRegister.style.color = "white"
-        btnRegister.style.border = "1px solid #003884"
-
-        btnLogin.style.backgroundColor = "white"
-        btnLogin.style.border = "none"
-        btnLogin.style.color = "#000"
-
-        loginForm.style.display = "none"
-        registerForm.style.display = "flex"
-        
-
-        
-    }
     
-
-
-</script>
-    
-    
-  </body>
+</body>
 
 </html>
