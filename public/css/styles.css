@@ -63,6 +63,16 @@ header div nav ul li{
     cursor: pointer;
 }
 
+header div nav ul li a{
+    padding: 7px;
+    transition: all .5s;
+}
+
+header div nav ul li a:hover{
+    background-color: #9393938f;
+    border-radius: 5px;
+}
+
 header nav ul form{
     margin-left: 5%;
 }
@@ -111,14 +121,18 @@ header div nav ul li span {
 }
 
 #myLinks{
-    display: none;
+    display: flex;
     background-color: black;
     flex-direction: column;
     width: 100%;
     align-items: center;
     position: fixed;
     z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
 }
+
 
 #myLinks a{
     text-decoration: none;
@@ -170,7 +184,7 @@ header div nav ul li span {
     .icon{
         display: block !important;
     }
-    .top-nav{
+    .top-nav ul li{
         display: none;
     }
     #myLinks{
