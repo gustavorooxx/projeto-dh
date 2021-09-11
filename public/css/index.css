@@ -17,6 +17,16 @@ h2{
 
 .section1 article{
     cursor: pointer;
+    overflow: hidden;   
+}
+
+.section1 article img{
+    transition: transform .4s;
+}
+
+.section1 article:hover img{
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
 }
 
 .banner{
@@ -29,8 +39,8 @@ h2{
     font-weight: 700;
     position: absolute;
     padding: 20px;
+    z-index: 1;
 }
-
 
 .bannerx2{
     display: flex;
@@ -38,6 +48,7 @@ h2{
     justify-content: space-between;
     width: 25%;
 }
+
 
 
 section .bannerx2 article{
