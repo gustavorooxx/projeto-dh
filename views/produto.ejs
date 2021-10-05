@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
     <link rel="stylesheet" href="css/produto.css">
+    <script src="javascripts/produto.js"></script>
   </head>
 
   <%- include('./repeat_views/header'); %>
@@ -30,11 +31,10 @@
             </section>
 
             <div class="pre-description">
-                    <h3>LOREM IPSUM</h3>
+                    <h3>CESTO DECORATIVO</h3>
                     <p class="valor">R$34,00</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
-                        Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. 
-                        Vestibulum ultricies aliquam convallis.
+                        Cum sociis natoque penatibus et magnis dis parturient.
                     </p>
                     <span>03 disponíveis</span>
 
@@ -69,44 +69,6 @@
         </div>
 
     </div>  
-
-
-    <!-- Script Btn -->
-<script>
-  function moreInfoBtn() {
-
-    var descriptionBtn = document.getElementById("btn-description");
-    var moreInfoBtn = document.getElementById("btn-moreInfo")
-    var descInfo = document.getElementById("description")
-    var moreInfo = document.getElementById("moreInfo")
-
-    descriptionBtn.style.backgroundColor = "white"
-    descriptionBtn.style.color = "black"
-    descriptionBtn.style.border = "1px solid #575757"
-    moreInfoBtn.style.border = "none"
-    moreInfoBtn.style.backgroundColor = "#003884"
-    moreInfoBtn.style.color = "white"
-    descInfo.style.display = "none"
-    moreInfo.style.display = "block"
-  }
-
-  function descriptionBtn() {
-
-    var descriptionBtn = document.getElementById("btn-description");
-    var moreInfoBtn = document.getElementById("btn-moreInfo")
-    var descInfo = document.getElementById("description")
-    var moreInfo = document.getElementById("moreInfo")
-
-    moreInfoBtn.style.backgroundColor = "white"
-    moreInfoBtn.style.color = "black"
-    moreInfoBtn.style.border = "1px solid #575757"
-    descriptionBtn.style.backgroundColor = "#003884"
-    descriptionBtn.style.color = "white"
-    descriptionBtn.style.border = "none"
-    descInfo.style.display = "block"
-    moreInfo.style.display = "none"
-}
-</script>
 
   </body>
 

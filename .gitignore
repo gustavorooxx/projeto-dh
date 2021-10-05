@@ -1,1 +1,4 @@
 /node_modules
+
+# dados sensíveis
+database/config/config.json

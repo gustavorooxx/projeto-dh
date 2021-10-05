@@ -1,0 +1,34 @@
+'use strict';
+
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+
+    await queryInterface.createTable('pedido',
+
+     {
+     
+     id: {type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement:true},
+     dataPedido: {type: Sequelize.DataTypes.DATE, allowNull: false},
+     usuario_id: {
+       type: Sequelize.DataTypes.INTEGER, 
+       allowNull: false,
+       references: {
+         model: {
+           tableName: 'usuario'
+         },
+         key:'id'
+       }
+      },
+     status: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
+     status_id: {type: Sequelize.DataTypes.INTEGER, allowNull: false}, 
+    }
+     
+     );
+  },
+
+  down: async (queryInterface, Sequelize) => {
+  
+    await queryInterface.dropTable('pedido');
+    
+  }
+};

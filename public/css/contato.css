@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .page-container{
 
     padding: 10% 10% 5% 10%;
