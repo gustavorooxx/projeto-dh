@@ -20,7 +20,15 @@ module.exports = {
        }
       },
      status: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
-     status_id: {type: Sequelize.DataTypes.INTEGER, allowNull: false}, 
+     status_id: {
+      type: Sequelize.DataTypes.INTEGER, 
+      allowNull: false},
+      references: {
+        model: {
+          tableName: 'status'
+        },
+        key:'id'
+      } 
     }
      
      );
