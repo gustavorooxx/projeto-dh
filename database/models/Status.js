@@ -9,6 +9,13 @@ module.exports = (sequelize, DataType) => {
             timestamps: false
         });
 
+    //Criando relações
+    
+    // Um Status está em muitos pedidos
+    Status.associate = (models) => {
+        Status.hasMany(models.Pedido, {as: 'pedido', foreignKey:'status_id'})
+    }
+
 
       return Status;  
     

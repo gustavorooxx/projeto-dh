@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-     await queryInterface.createTable('usuario',
+     return await queryInterface.createTable('usuario',
 
      {
      
@@ -12,7 +12,8 @@ module.exports = {
      nick_name: {type: Sequelize.DataTypes.STRING(45), allowNull: false, unique: true},
      email: {type: Sequelize.DataTypes.STRING(45), allowNull: false, unique: true},
      senha: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
-     enderecoEntrega: {type: Sequelize.DataTypes.STRING(45), allowNull: false}
+     enderecoEntrega: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
+     telefone: {type: Sequelize.DataTypes.STRING(45), allowNull: false}
      
     }
      
@@ -22,7 +23,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     
-    await queryInterface.dropTable('usuario');
+    return await queryInterface.dropTable('usuario');
   
   }
 };

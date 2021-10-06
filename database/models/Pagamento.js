@@ -16,7 +16,7 @@ module.exports = (sequelize, DataType) => {
         Pagamento.associate = (models) => {
         
         // Um pagamento pertence a um pedido
-        Pagamento.belongsTo(models.Pedido, {as: 'pedido', foreignKey:'pedidos_id'})
+        Pagamento.belongsTo(models.Pedido, {as: 'pedido', foreignKey:'pedido_id'})
 
         }
 

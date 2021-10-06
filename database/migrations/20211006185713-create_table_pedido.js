@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-    await queryInterface.createTable('pedido',
+    return await queryInterface.createTable('pedido',
 
      {
      
@@ -22,13 +22,15 @@ module.exports = {
      status: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
      status_id: {
       type: Sequelize.DataTypes.INTEGER, 
-      allowNull: false},
+      allowNull: false,
       references: {
         model: {
           tableName: 'status'
         },
         key:'id'
-      } 
+      }
+      },
+     
     }
      
      );
@@ -36,7 +38,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
   
-    await queryInterface.dropTable('pedido');
+    return await queryInterface.dropTable('pedido');
     
   }
 };
