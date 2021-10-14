@@ -30,7 +30,7 @@ module.exports = (sequelize, DataType) => {
 
             as: 'produtos',  //nome do relacionamento
             through:'pedido_x_produto', //nome da tabela intermediária
-            foreignKey: 'pedidos_id', //id do model codado na tabela intermediária
+            foreignKey: 'pedido_id', //id do model codado na tabela intermediária
             otherKey: 'produto_id', // id do model relacionado na tabela intermediária
             timestamps: false,
         })
