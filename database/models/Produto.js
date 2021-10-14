@@ -2,7 +2,7 @@ module.exports = (sequelize, DataType) => {
     const Produto = sequelize.define(
         'Produto',
         {
-            tokenProduto: {type: DataType.STRING(45), allowNull: false},
+            nome: {type: DataType.STRING(45), allowNull: false},
             categorias_id: {type: DataType.INTEGER, allowNull: false},
             preço: {type: DataType.DECIMAL(10,2), allowNull: false},
             descrição: {type:DataType.MEDIUMTEXT, allowNull: false},
