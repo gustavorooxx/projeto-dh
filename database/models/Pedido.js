@@ -20,10 +20,20 @@ module.exports = (sequelize, DataType) => {
         Pedido.belongsTo(models.Usuario, {as: 'usuario', foreignKey:'usuario_id'})
 
         // Um pedido tem um pagamento
-        Pedido.belongsTo(models.Pagamento, {as:'pagamento', foreignKey:'pedido_id'})
+        Pedido.belongsTo(models.Pagamento, {as:'pagamento', foreignKey:'pedido_id'}) 
 
         //Um pedido tem um Status
-        Pedido.belongsTo(models.Status, {as:'status', foreignKey:'status_id'})
+        Pedido.belongsTo(models.Status, {as:'statusPedido', foreignKey:'status_id'})
+
+        //Um pedido tem muitos produtos
+        Pedido.belongsToMany(models.Produto, {
+
+            as: 'produtos',  //nome do relacionamento
+            through:'pedido_x_produto', //nome da tabela intermediária
+            foreignKey: 'pedidos_id', //id do model codado na tabela intermediária
+            otherKey: 'produto_id', // id do model relacionado na tabela intermediária
+            timestamps: false,
+        })
 
         }
 

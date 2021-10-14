@@ -2,7 +2,7 @@ module.exports = (sequelize, DataType) => {
     const Status = sequelize.define(
         'Status',
         {
-            nome: {type: DataType.DATE, allowNull: false} 
+            nome: {type: DataType.INTEGER, allowNull: false} 
         },
         {
             tableName:'status',

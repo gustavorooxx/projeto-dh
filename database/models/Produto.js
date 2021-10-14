@@ -5,7 +5,7 @@ module.exports = (sequelize, DataType) => {
             nome: {type: DataType.STRING(45), allowNull: false},
             categorias_id: {type: DataType.INTEGER, allowNull: false},
             preço: {type: DataType.DECIMAL(10,2), allowNull: false},
-            descrição: {type:DataType.MEDIUMTEXT, allowNull: false},
+            descrição: {type:DataType.STRING(1234), allowNull: false},
         },
         {
             tableName:'produto',
@@ -16,8 +16,18 @@ module.exports = (sequelize, DataType) => {
 
         Produto.associate = (models) => {
         
-        // Um pagamento pertence a um pedido
+        // Um produto tem uma categoria
         Produto.belongsTo(models.Categoria, {as: 'categoria', foreignKey:'categoria_id'})
+
+        // Um produto tem em muitos pedidos
+        Produto.belongsToMany(models.Pedido, {
+            
+                as: 'pedidos',  //nome do relacionamento
+                through:'pedido_x_produto', //nome da tabela intermediária
+                foreignKey: 'produto_id', //id do model codado na tabela intermediária
+                otherKey: 'pedido_id', // id do model relacionado na tabela intermediária
+                timestamps: false,
+        })
 
 
         }

@@ -3,8 +3,8 @@ module.exports = (sequelize, DataType) => {
         'Pagamento',
         {
             tokenPagamento: {type: DataType.STRING(45), allowNull: false},
-            pedidos_id: {type: DataType.INTEGER, allowNull: false},
-            pedidos_usuario_id: {type: DataType.INTEGER, allowNull: false}, 
+            pedido_id: {type: DataType.INTEGER, allowNull: false},
+            pedido_usuario_id: {type: DataType.INTEGER, allowNull: false}, 
         },
         {
             tableName:'pagamento',
