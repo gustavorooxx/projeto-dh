@@ -2,23 +2,36 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+
+    return await queryInterface.bulkInsert('pedido', [
+      {
+         id: '1',
+         nome:'lustre',
+         categoria_id: '2',
+         preco: 'R$ 300,00',
+         descricao: 'lustre banhado a bronze'
+      },
+      {
+        id: '2',
+        nome:'cadeira gamer',
+        categoria_id: '1',
+        preco: 'R$ 1000,00',
+        descricao: 'Cadeira reclinável para gamers'
+     },
+     {
+      id: '3',
+      nome:'sofá três lugares',
+      categoria_id: '3',
+      preco: 'R$ 1200,00',
+      descricao: 'sofá anti acaro de três lugares azul'
+      
+   },
+    
+    ]);
+ 
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    return await queryInterface.bulkDelete('produto', null);
   }
 };
