@@ -35,10 +35,16 @@ h2{
 }
 
 .text-banner{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     position: absolute;
     padding: 20px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.section1 article:hover .text-banner{
+    opacity: 1;
     z-index: 1;
 }
 
@@ -119,7 +125,7 @@ section .bannerx2 article{
 .section2 span{
     font-size: 13px;
     color: #939393;
-    transition: all 1s;
+    transition: all .2s;
 }
 
 .section2 article:hover .product-name span{

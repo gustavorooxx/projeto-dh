@@ -6,42 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
     <link rel="stylesheet" href="css/login.css">
-    <script src="javascripts/login.js"></script>
   </head>
-
+  
   <body>
     
-<div class="page-container">    
-
-    <img src="images/logo-login.png" alt="">
-    
-    <div class="form-container">
+    <div class="page-container">    
+      
+      <img src="images/logo-login.png" alt="">
+      
+      <div class="form-container">
         <div class="buttons">
-            <div class="btn-login" id="btn-login" onclick="loginBtn()"><h5>LOGIN</h5></div>
-            <div class="btn-register" id="btn-register" onclick="registerBtn()"><h5>REGISTRO</h5></div>
+          <div class="btn-login" id="btn-login" onclick="loginBtn()"><h5>LOGIN</h5></div>
+          <div class="btn-register" id="btn-register" onclick="registerBtn()"><h5>REGISTRO</h5></div>
         </div>
-  
+        
         <form id="loginForm" action="" method="POST">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email">
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password">
-                <div class="rememberPass"><input type="checkbox" name="rememberPass" id="rememberPass"> <span>Lembrar-me</span></div>
-                <div><a href="">Esqueceu sua senha? Clique aqui.</a></div>
-                <button type="submit">Login</button>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password">
+          <div class="rememberPass"><input type="checkbox" name="rememberPass" id="rememberPass"> <span>Lembrar-me</span></div>
+          <div><a href="">Esqueceu sua senha? Clique aqui.</a></div>
+          <button type="submit">Login</button>
         </form>
-   
+        
         <form id="registerForm" action="" method="POST">
-                <p>Preencha seus dados!</p>
-                <input placeholder="Nome Completo" type="text" name="nome" id="nome">
-                <input placeholder="E-mail" type="email" name="email" id="email">
-                <input placeholder="Senha" type="password" name="password" id="password">
-                <input placeholder="Confirme sua senha" type="password" name="password" id="password">
-                <button type="submit">CADASTRAR</button>
+          <p>Preencha seus dados!</p>
+          <input placeholder="Nome Completo" type="text" name="nome" id="nome">
+          <input placeholder="E-mail" type="email" name="email" id="email">
+          <input placeholder="Senha" type="password" name="password" id="password">
+          <input placeholder="Confirme sua senha" type="password" name="password" id="password">
+          <button type="submit">CADASTRAR</button>
         </form>
-    </div>   
-</div>
-    
-</body>
+      </div>   
+    </div>
+  <!-- Scripts  -->  
+  <script src="javascripts/login.js"></script>
 
-</html>
+  </body>
+  
+  </html>

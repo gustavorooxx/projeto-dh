@@ -127,7 +127,7 @@ p{
 span{
     font-size: 13px;
     color: #939393;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .products section article:hover span{

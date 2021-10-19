@@ -6,70 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
     <link rel="stylesheet" href="css/produto.css">
-    <script src="javascripts/produto.js"></script>
   </head>
-
+  
   <%- include('./repeat_views/header'); %>
-
+  
   <body>
     
     <div class="page-container">
-    
-        <div class="img-predesc-container">
-
-            <section>
-                <div class="tumbs">
-                    <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
-                    <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
-                    <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
-                    <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
-                </div>
-
-                <div>
-                    <a href=""><img class="picture" src="images/produtos/cesto.jpg" alt=""></a>
-                </div>
-            </section>
-
-            <div class="pre-description">
-                    <h3>CESTO DECORATIVO</h3>
-                    <p class="valor">R$34,00</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
-                        Cum sociis natoque penatibus et magnis dis parturient.
-                    </p>
-                    <span>03 disponíveis</span>
-
-                    <div>
-                    <form action="">
-                    <h4>QTD</h4>
-                    <input type="number" name="" id="">
-                    <button> <img src="images/shopping-cart.png" alt=""> colocar no carrinho</button>
-                    </form>
-
-                    </div>
-            </div>
-        </div>
-        <!-- Botões descrição e informações adicionais -->
-        <div class="buttons">
-          <div class="btn-description" id="btn-description" onclick="descriptionBtn()"><h5>DESCRIÇÃO</h5></div>
-          <div class="btn-moreInfo" id="btn-moreInfo" onclick="moreInfoBtn()"><h5>INFORMAÇÕES ADICIONAIS</h5></div>
-        </div>
-        <!-- Descrição/Informação Adicional -->
-        <div class="infos">
-          <p id="description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
-             Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis. 
-             Maecenas ut tellus mi. Proin tincidunt, lectus eu volutpat mattis, ante metus lacinia tellus, vitae condimentum nulla enim bibendum nibh.
-             Praesent turpis risus, interdum nec venenatis id, pretium sit amet purus. Interdum et malesuada fames.</p>
-
-             <p id="moreInfo">
-              Peso: 2 kg <br>
-              Dimensões: 10 × 10 × 15 cm <br>
-              Cor: Rosa <br>
-              Material: Madeira</p>
+      
+      <div class="img-predesc-container">
+        
+        <section>
+          <div class="tumbs">
+            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
+            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
+            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
+            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
+          </div>
+          
+          <div>
+            <a href=""><img class="picture" src="images/produtos/cesto.jpg" alt=""></a>
+          </div>
+        </section>
+        
+        <div class="pre-description">
+          <h3>CESTO DECORATIVO</h3>
+          <p class="valor">R$34,00</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
+            Cum sociis natoque penatibus et magnis dis parturient.
+          </p>
+          <span>03 disponíveis</span>
+          
+          <div>
+            <form action="">
+              <h4>QTD</h4>
+              <input type="number" name="" id="">
+              <button> <img src="images/shopping-cart.png" alt=""> colocar no carrinho</button>
+            </form>
             
+          </div>
         </div>
-
-    </div>  
-
+      </div>
+      <!-- Botões descrição e informações adicionais -->
+      <div class="buttons">
+        <div class="btn-description" id="btn-description" onclick="descriptionBtn()"><h5>DESCRIÇÃO</h5></div>
+        <div class="btn-moreInfo" id="btn-moreInfo" onclick="moreInfoBtn()"><h5>INFORMAÇÕES ADICIONAIS</h5></div>
+      </div>
+      <!-- Descrição/Informação Adicional -->
+      <div class="infos">
+        <p id="description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
+          Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis. 
+          Maecenas ut tellus mi. Proin tincidunt, lectus eu volutpat mattis, ante metus lacinia tellus, vitae condimentum nulla enim bibendum nibh.
+          Praesent turpis risus, interdum nec venenatis id, pretium sit amet purus. Interdum et malesuada fames.</p>
+          
+          <p id="moreInfo">
+            Peso: 2 kg <br>
+            Dimensões: 10 × 10 × 15 cm <br>
+            Cor: Rosa <br>
+            Material: Madeira</p>
+            
+          </div>
+          
+        </div>  
+  <!-- Scripts  -->  
+  <script src="javascripts/produto.js"></script>
+  
   </body>
 
   <%- include('./repeat_views/footer'); %>
