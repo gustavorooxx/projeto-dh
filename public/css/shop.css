@@ -66,12 +66,22 @@ input[type="number"]{
 .apply{
     width: 50%;
     height: 25px;
-    background-color: #003884;;
+    background-color: #003884;
     border: 0;
     border-radius: 5px;
     color: #fff;
     text-transform: uppercase;
     font-size: 10px;
+    letter-spacing: .5px;
+    font-weight: 500;
+}
+
+.apply:hover{
+    background-color: #0059d4;
+}
+
+.apply:focus{
+    background-color: #003884;
 }
 
 /* PRODUTOS */

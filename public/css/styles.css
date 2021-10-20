@@ -61,7 +61,10 @@ header div nav ul li{
     display: flex;
     align-items: center;
     cursor: pointer;
+
 }
+
+
 
 header div nav ul li a{
     padding: 7px;
@@ -76,6 +79,68 @@ header div nav ul li a:hover{
 header nav ul form{
     margin-left: 5%;
 }
+
+.tooltip_carrinho{
+  position: relative;
+}
+
+.tooltip_carrinho .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #9393938f;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        height: 18px;
+        margin-left: -60px;
+  }
+
+  .tooltip_carrinho:hover .tooltiptext {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    letter-spacing: .5px;
+  }
+
+  .tooltip_login{
+      position: relative;
+  }
+
+  .tooltip_login .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #9393938f;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    height: 18px;
+    margin-left: -60px;
+}
+  
+  .tooltip_login:hover .tooltiptext{
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    letter-spacing: .5px;
+  }
 
 #search{
     background-color: transparent;

@@ -143,7 +143,17 @@ body{
     width: 100%;
     height: 40px;
     margin-top: 25px;
+    
 }
+
+.resume form button:hover{
+    background-color: #0059d4;
+}
+
+.resume form button:focus{
+    background-color: #003884;
+}
+
 
 .back-shop{
     cursor: pointer;

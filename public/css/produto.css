@@ -82,6 +82,14 @@ form button{
     cursor: pointer;
 }
 
+form button:hover{
+    background-color: #0059d4;
+}
+
+form button:focus{
+    background-color: #003884;
+}
+
 form button img{
     height: 20px;
 }

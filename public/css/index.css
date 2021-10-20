@@ -139,6 +139,30 @@ img{
     object-fit: cover;
 }
 
+.shop-btn{
+    justify-content: end;
+    display: flex;
+}
+
+.shop-btn button{
+    border: none;
+    background-color: #003884;
+    height: 50px;
+    width: 10%;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.shop-btn button:hover{
+    background-color: #0059d4;
+}
+
+.shop-btn button:focus{
+    background-color: #003884;
+}
+
 /* Responsive */
 
 @media (max-width: 1230px) {
