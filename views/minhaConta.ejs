@@ -1,38 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minha Conta</title>
     <link rel="stylesheet" href="css/minhaConta.css">
 </head>
 
 <body>
+
     <%- include('./repeat_views/header'); %>
-    <div class="page-container">
+
+<div class="page-container">
+
+    <!-- Avatar do usuário -->
     <section class="usuario">
-        <img src="" alt="imagemUsuario">
+       <img src="images/selfie.jpg" alt="imagemUsuario">
         <br>
         <span>
-            Olá @usuário!
+            Olá, @usuário!
         </span>
         <br>
-        <lu>
-            <li><a href="">Painel</a></li>
+        <!-- Menu do Usuário -->
+        <ul>
             <li><a href="">Pedidos</a></li>
             <li><a href="">Detalhes da conta</a></li>
+            <li><a href="">Atualizar Endereço</a></li>
             <li><a href="">Sair</a></li>
-        </lu>
+        </ul>
     </section>
-    <section class="compras">
+
+    
+    <!-- Exibição menu -->
+
+    <!-- PEDIDOS -->
+    <section class="compras" id="pedidos">
+        <!-- Sem pedidos -->
+        <div id="no-shop">
         <p class= "paragrafo">
             Nenhuma compra realizada :(
         </p>
-        <button class="botao">COMPRAR</button>
+        <button class="botao" onclick="location.href='/loja'">COMPRAR</button>
+        </div>
+
     </section>
-    </div>
+
+    <section>
+            <!-- Com pedidos -->
+
+            <div class="fiscal-note" id="pedido">
+
+                <h4>Pedido 01</h4>
+                <div class="products">
+                    <p>Produtos</p>
+                    <span>01 Vaso Decorativo</span>
+                    <span>03 Relógio Vintage</span>
+                    <span>04 Cadeiras Vintage</span>
+                </div>
+        
+                </div>
+    </section>
+
+    <!-- Detalhes da conta -->
+
+
+    <!-- Atualizar Endereço -->
+
+    
+
+
+
+
+</div>
+
     <%- include('./repeat_views/footer'); %>
+
+    <!-- Scripts -->
+<script src="javascripts/minhaConta.js"></script>
+
 </body>
 
 </html>

@@ -1,22 +1,13 @@
+body{
+    overflow-x: hidden !important;
+    align-self: center;
+}
+
 .page-container{
 
-    padding: 100px 10% 5% 10%;
+    padding: 10% 10% 5% 10%;
     display: flex;
-    flex-direction: row;
-    height: 80vh;
-}
-title{
-    display: none;
-}
-body{
- 
-    align-self: center;
-    /* margin-top: 10% ;
-    margin-bottom: 5%; */
-    /* background-color: rgb(143, 120, 31); */
-    /* flex-direction: row;
-    justify-content: space-between; */
-    /* padding: 10% 10% 5% 10%; */
+
 }
 .usuario{
     width: 30%;
@@ -26,28 +17,101 @@ body{
     flex-direction: column;
     justify-content: space-around;
 }
+
+.usuario img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.usuario span{
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.usuario ul{
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+
+.usuario ul li a{
+    text-decoration: none;
+    color: #939393;
+}
+
+.usuario ul li a:hover{
+    color: #000;
+}
+
+.usuario ul li a:focus{
+    color: #939393;
+}
+
 .compras{
     width: 60%;
     height: 5%;
-    display: flex;
-    /* background-color: darkblue; */
+    display: none;
     flex-direction: row;
     justify-content: space-between;
 }
-.paragrafo{
-    width: 50%;
-    text-align: right;
+
+#no-shop{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5%;
 }
 
 .botao{
-   
     justify-content: center;
     align-items: center;
     width: 30%;
     min-height: 20px;
-    background-color: black;
-    color:white;
+    background-color: #003884;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+
 }
-.imagem-usuario{
-    height: 30%;
+
+.botao:hover{
+    background-color: #0059d4;
+}
+
+.botao:focus{
+    background-color: #003884;
+}
+
+.fiscal-note{
+    width: 200px;
+    height: 300px;
+    border: 1px solid #cdcd30;
+    border-bottom: dashed 2px#cdcd30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffc7;
+    border-radius: 5px;
+}
+
+.fiscal-note h3{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.products{
+    display: flex;
+    flex-direction: column
+}
+
+.products p {
+    font-weight: 500;
+}
+
+.products span{
+    font-size: 12px;
+    text-decoration: underline;
 }

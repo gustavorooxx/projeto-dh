@@ -45,6 +45,14 @@ h5{
     font-size: 13px;
 }
 
+.filters div ul li a:hover{
+    color: #000;
+}
+
+.filters div ul li a:focus{
+    color: #939393;
+}
+
 .filters form{
     display: flex;
     flex-direction: column;
@@ -134,7 +142,7 @@ p{
     cursor: pointer;
 }
 
-span{
+.product-value{
     font-size: 13px;
     color: #939393;
     transition: all 0.2s;

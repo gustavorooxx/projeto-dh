@@ -11,8 +11,8 @@ module.exports = {
      nome: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
      nick_name: {type: Sequelize.DataTypes.STRING(45), allowNull: false, unique: true},
      email: {type: Sequelize.DataTypes.STRING(45), allowNull: false, unique: true},
-     senha: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
-     enderecoEntrega: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
+     senha: {type: Sequelize.DataTypes.STRING(256), allowNull: false},
+     enderecoEntrega: {type: Sequelize.DataTypes.STRING(256), allowNull: false},
      telefone: {type: Sequelize.DataTypes.STRING(45), allowNull: false}
      
     }
