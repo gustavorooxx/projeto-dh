@@ -21,7 +21,7 @@ module.exports = (sequelize, DataType) => {
         Pedido.belongsTo(models.Usuario, {as: 'usuario', foreignKey:'usuario_id'})
 
         // Um pedido tem um pagamento
-        Pedido.belongsTo(models.Pagamento, {as:'pagamento', foreignKey:'pedido_id'}) 
+        Pedido.belongsTo(models.Pagamento, {as:'pagamento', foreignKey:'id'}) 
 
         //Um pedido tem um Status
         Pedido.belongsTo(models.Status, {as:'statusPedido', foreignKey:'status_id'})

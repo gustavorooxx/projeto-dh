@@ -37,7 +37,7 @@ module.exports = (sequelize, DataType) => {
         Usuario.associate = (models) => {
         
         // Um usuário tem muitos pedidos
-        Usuario.hasMany(models.Pedido, {as: 'ps', foreignKey:'usuario_id'})
+        Usuario.hasMany(models.Pedido, {as: 'pedido', foreignKey:'usuario_id'})
         
         }
 

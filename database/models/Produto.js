@@ -3,9 +3,9 @@ module.exports = (sequelize, DataType) => {
         'Produto',
         {
             nome: {type: DataType.STRING(45), allowNull: false},
-            categorias_id: {type: DataType.INTEGER, allowNull: false},
-            preço: {type: DataType.DECIMAL(10,2), allowNull: false},
-            descrição: {type:DataType.STRING(1234), allowNull: false},
+            categoria_id: {type: DataType.INTEGER, allowNull: false},
+            preco: {type: DataType.DECIMAL(10,2), allowNull: false},
+            descricao: {type:DataType.STRING(1234), allowNull: false},
         },
         {
             tableName:'produto',

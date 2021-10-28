@@ -6,7 +6,7 @@ module.exports = {
     return await queryInterface.createTable('pagamento', {
 
       id: {type:Sequelize.DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-      tokenPagamento: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
+      tokenPagamento: {type: Sequelize.DataTypes.STRING(256), allowNull: false},
       pedido_id: {
         type: Sequelize.DataTypes.INTEGER, 
         allowNull: false,
