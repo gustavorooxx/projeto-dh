@@ -1,6 +1,6 @@
 const CheckoutController = {
     show: (req, res) => {
-        res.render('checkout')
+        res.render('checkout', {usuario:req.session.usuario})
     }
 }
 

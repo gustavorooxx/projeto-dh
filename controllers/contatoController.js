@@ -1,6 +1,6 @@
 const ContatoController = {
     show: (req, res) => {
-        res.render('contato');
+        res.render('contato', {usuario:req.session.usuario});
     }
 }
 

@@ -46,51 +46,58 @@ h3{
     display: flex;
     flex-direction: column;
     margin-left: 5%;
+    width: 100%;
 }
 
 .valor{
     margin: 10px 0px;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
 }
 
 .pre-description span{
     font-size: 12px;
 }
 
-form{
+.reais{
+    margin-right: 5px;
+    font-weight: 300;
+}
+
+#form{
     display: flex;
     align-items: center;
 }
 
-form input{
+#form input{
     margin: 0% 5% 0% 1%;
-    width: 7.5%;
+    width: 10%;
     outline: none;
 }
 
-form button{
+#form button{
     background-color: #003884;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 30%;
+    width: 40%;
     height: 35px;
     border: 0;
     border-radius: 10px;
     cursor: pointer;
 }
 
-form button:hover{
+#form button:hover{
     background-color: #0059d4;
 }
 
-form button:focus{
+#form button:focus{
     background-color: #003884;
 }
 
-form button img{
+#form button img{
     height: 20px;
 }
 

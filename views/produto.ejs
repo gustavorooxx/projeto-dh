@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
-    <link rel="stylesheet" href="css/produto.css">
+    <link rel="stylesheet" href="/css/produto.css">
   </head>
   
   <%- include('./repeat_views/header'); %>
@@ -18,33 +18,32 @@
         
         <section>
           <div class="tumbs">
-            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
-            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
-            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
-            <a href=""><img class="mini-img" src="images/produtos/cesto.jpg" alt=""></a>
+            <a href=""><img class="mini-img" src="<%= produto.imgProduto %>" alt=" <%= produto.nome %>"></a>
+            <a href=""><img class="mini-img" src="<%= produto.imgProduto %>" alt=" <%= produto.nome %>"></a>
+            <a href=""><img class="mini-img" src="<%= produto.imgProduto %>" alt=" <%= produto.nome %>"></a>
+            <a href=""><img class="mini-img" src="<%= produto.imgProduto %>" alt=" <%= produto.nome %>"></a>
           </div>
           
           <div>
-            <a href=""><img class="picture" src="images/produtos/cesto.jpg" alt=""></a>
+            <a href=""><img class="picture"src="<%= produto.imgProduto %>" alt=" <%= produto.nome %>"></a>
           </div>
         </section>
         
         <div class="pre-description">
-          <h3>CESTO DECORATIVO</h3>
-          <p class="valor">R$34,00</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
-            Cum sociis natoque penatibus et magnis dis parturient.
-          </p>
+          <h3 id="nome"> <%= produto.nome %> </h3>
+          <p class="valor" id="valor"> <span class="reais">R$</span> <%= produto.preco.replace('.',',') %> </p>
+          <p> <%= produto.descricao %></p>
+
           <span>03 disponíveis</span>
           
           <div>
-            <form action="">
+            <form id="form">
               <h4>QTD</h4>
-              <input type="number" name="quantidade" id="quantidade">
-              <button><img src="images/shopping-cart.png" alt="">colocar no carrinho</button>
-            </form>
-            
+              <input type="number" min="1" max="20" name="quantidade" id="quantidade">
+              <button type="submit"><img src="/images/shopping-cart.png" alt="">colocar no carrinho</button>
+            </form> 
           </div>
+
         </div>
       </div>
       <!-- Botões descrição e informações adicionais -->
@@ -54,10 +53,7 @@
       </div>
       <!-- Descrição/Informação Adicional -->
       <div class="infos">
-        <p id="description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. 
-          Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis. 
-          Maecenas ut tellus mi. Proin tincidunt, lectus eu volutpat mattis, ante metus lacinia tellus, vitae condimentum nulla enim bibendum nibh.
-          Praesent turpis risus, interdum nec venenatis id, pretium sit amet purus. Interdum et malesuada fames.</p>
+        <p id="description" > <%= produto.descricao %> </p>
           
           <p id="moreInfo">
             Peso: 2 kg <br>
@@ -69,7 +65,7 @@
           
         </div>  
   <!-- Scripts  -->  
-  <script src="javascripts/produto.js"></script>
+  <script src="/javascripts/produto.js"></script>
   
   </body>
 

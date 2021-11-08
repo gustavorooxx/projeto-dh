@@ -1,4 +1,5 @@
 
+
 function myFunction(){
     var element = document.getElementById("myLinks");
 
@@ -13,5 +14,13 @@ function myFunction(){
         element.style.pointerEvents = "all"
     }
 }
+
+
+
+let btnEntrarRegistrar = document.getElementById('entrar') 
+
+
+
+
 
 

@@ -1,6 +1,7 @@
 const IndexController = {
-    home: (req, res) => {
-        res.render('index');
+    show: (req, res) => {
+
+        res.render('index', {usuario:req.session.usuario});
     }
 }
 

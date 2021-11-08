@@ -13,7 +13,7 @@ module.exports = {
      email: {type: Sequelize.DataTypes.STRING(45), allowNull: false, unique: true},
      senha: {type: Sequelize.DataTypes.STRING(256), allowNull: false},
      enderecoEntrega: {type: Sequelize.DataTypes.STRING(256), allowNull: false},
-     telefone: {type: Sequelize.DataTypes.STRING(45), allowNull: false}
+     telefone: {type: Sequelize.DataTypes.STRING(45), allowNull: false},
      
     }
      

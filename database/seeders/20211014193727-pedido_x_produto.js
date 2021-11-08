@@ -11,7 +11,7 @@ module.exports = {
       },
 
       {
-        pedido_id: 1,
+        pedido_id: 2,
         produto_id:3,
         quantidade:2,
         valor_total: 3339.90
@@ -23,6 +23,13 @@ module.exports = {
       quantidade:4,
       valor_total:3999.90
    },
+
+   {
+    pedido_id: 1,
+    produto_id:3,
+    quantidade:4,
+    valor_total:759.90
+ },
 
 
     

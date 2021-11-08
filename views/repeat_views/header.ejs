@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -15,7 +15,7 @@
 
     <header>
         <div class="container">
-            <a href="/"><img class="logo" src="images/logo-provisorio.png" alt=""></a>
+            <a href="/"><img class="logo" src="/images/logo-provisorio.png" alt=""></a>
         <nav class="top-nav">
             <ul>
                 <li><a href="/loja">Comprar</a></li>
@@ -24,12 +24,17 @@
                 
                 <form action="">
                 <li><input placeholder="O que você procura?" type="text" name="search" id="search"> 
-                <img class="loupe" src="images/loupe.png" alt=""> </li>
+                <img class="loupe" src="/images/loupe.png" alt=""> </li>
                 </form>    
                 
-                <li  class="tooltip_carrinho" onclick="location.href='/carrinho'"><img style="width: 20px;" src="images/shopping-cart.png" alt=""> <span class="span">(R$100,00)</span> <span class="tooltiptext">Carrinho</span></li>
-                <li  class="tooltip_login" onclick="location.href='/login'"><img style="width: 20px;" src="images/user.png" alt=""> <span class="span">Entrar/Registrar</span> <span class="tooltiptext">Entrar</span></li>
+                <li  class="tooltip_carrinho" onclick="location.href='/carrinho'"><img style="width: 20px;" src="/images/shopping-cart.png" alt=""> <span class="span">(R$100,00)</span> <span class="tooltiptext">Carrinho</span></li>
+                <% if (usuario.logado == false){ %> 
+                    <li  class="tooltip_login"onclick="location.href='/login '"><img style="width: 20px;" src="/images/user.png" alt=""> <span class="span" id="entrar"> <%= usuario.nick_name%></span></li>
+                <% } else { %>
+                    <li  class="tooltip_login"onclick="location.href='/minhaconta '"><img style="width: 20px;" src="/images/user.png" alt=""> <span class="span" id="entrar"> <%= usuario.nick_name%></span></li>
+                <% } %>
                 
+        
             </ul>
         </nav>
 
@@ -46,7 +51,7 @@
 
         <form action="">
             <li><input placeholder="O que você procura?" type="text" name="search" id="search"> 
-            <img class="loupe" src="images/loupe.png" alt=""> </li>
+            <img class="loupe" src="/images/loupe.png" alt=""> </li>
         </form> 
 
         <ul>
@@ -59,7 +64,7 @@
    
 
 <!-- Scripts  -->  
-<script src="javascripts/header.js"></script>
+<script src="/javascripts/header.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@ module.exports = (sequelize, DataType) => {
             categoria_id: {type: DataType.INTEGER, allowNull: false},
             preco: {type: DataType.DECIMAL(10,2), allowNull: false},
             descricao: {type:DataType.STRING(1234), allowNull: false},
+            imgProduto: {type: DataType.STRING(45), allowNull: false}
         },
         {
             tableName:'produto',

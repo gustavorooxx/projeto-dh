@@ -17,7 +17,8 @@ module.exports = {
           },
           key:'id'
         }
-      }
+      },
+      imgProduto: {type: Sequelize.DataTypes.STRING(45), allowNull: false}
     });
   },
 

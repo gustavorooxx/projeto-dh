@@ -1,6 +1,6 @@
 const ProductController = {
     show: (req, res) => {
-        res.render('produto');
+        res.render('produto', {usuario:req.session.usuario});
     }
 }
 

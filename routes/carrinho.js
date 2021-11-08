@@ -1,8 +1,9 @@
 var express = require('express')
 var router = express.Router();
 
-const CartController = require("../controllers/carrinhoController")
+const CartController = require("../controllers/carrinhoController");
+const validaSession = require('../middlewares/validaSession');
 
-router.get('/carrinho', CartController.show)
+router.get('/carrinho', validaSession, CartController.show)
 
 module.exports = router;

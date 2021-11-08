@@ -1,6 +1,6 @@
 const SobreController = {
     show: (req, res) => {
-        res.render('sobre-nos')
+        res.render('sobre-nos', {usuario:req.session.usuario})
     }
 }
 

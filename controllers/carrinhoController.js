@@ -1,6 +1,6 @@
 const CartController = {
     show: (req, res) => {
-        res.render('carrinho')
+        res.render('carrinho', {usuario:req.session.usuario})
     }
 }
 

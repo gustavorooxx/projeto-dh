@@ -9,8 +9,8 @@ const {Pedido, sequelize} = require('./database/models');
 // mostrarPedido01();
 
 async function mostrarPedidos(){
-    let pedidos =  await Pedido.findAll({include:['usuario','pagamento', 'statusPedido', 'produtos']});
-    console.log(pedidos);
+    let pedidos =  await Pedido.findByPk(2, {include:['usuario','pagamento', 'statusPedido', 'produtos']});
+    console.log(pedidos.toJSON());
     sequelize.close();
 }
 

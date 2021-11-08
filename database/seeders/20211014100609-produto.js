@@ -5,30 +5,81 @@ module.exports = {
 
     return await queryInterface.bulkInsert('produto', [
       {
-         id: '1',
-         nome:'lustre',
-         categoria_id: '2',
-         preco: 300.00,
-         descricao: 'lustre banhado a bronze'
+        id: '1',
+        nome: 'Cesto decorativo',
+        categoria_id: '2',
+        preco: 200.00,
+        descricao: 'lustre banhado a bronze',
+        imgProduto: '/images/produtos/cesto.jpg'
       },
       {
         id: '2',
-        nome:'cadeira gamer',
+        nome: 'Cadeira Anatômica',
         categoria_id: '1',
-        preco: 1000.00,
-        descricao: 'Cadeira reclinável para gamers'
-     },
-     {
-      id: '3',
-      nome:'sofá três lugares',
-      categoria_id: '3',
-      preco: 1200.00,
-      descricao: 'sofá anti acaro de três lugares azul'
-      
-   },
-    
+        preco: 250.00,
+        descricao: 'Cadeira Anatômica decorativa',
+        imgProduto: '/images/produtos/cadeira-anatomica.jpg'
+      },
+      {
+        id: '3',
+        nome: 'Relógio Clássico Preto',
+        categoria_id: '2',
+        preco: 125.00,
+        descricao: 'Relógio preto clássico decorativo',
+        imgProduto: '/images/produtos/relogio1.jpg'
+
+      },
+      {
+        id: '4',
+        nome: 'Lustre Luxo Preto',
+        categoria_id: '2',
+        preco: 125.00,
+        descricao: 'Lustre preto luxuoso para sua mesa',
+        imgProduto: '/images/produtos/lustre-01.jpg'
+
+      },
+      {
+        id: '5',
+        nome: 'Mini Mesa de Centro',
+        categoria_id: '1',
+        preco: 355.00,
+        descricao: 'Mesa de centro para sua sala',
+        imgProduto: '/images/produtos/mesa-de-centro.jpg'
+
+      },
+      {
+        id: '6',
+        nome: 'Mesa de Centro Redonda',
+        categoria_id: '1',
+        preco: 355.00,
+        descricao: 'Mesa de centro redonda para sua sala',
+        imgProduto: '/images/produtos/mesa-de-centro2.jpg'
+
+      },
+      {
+        id: '7',
+        nome: 'Vaso Decor Deluxe',
+        categoria_id: '2',
+        preco: 55.00,
+        descricao: 'Vaso decorativo para sua casa',
+        imgProduto: '/images/produtos/vaso-01.jpg'
+
+      },
+
+      {
+        id: '8',
+        nome: 'Lustre Luxo Redondo',
+        categoria_id: '2',
+        preco: 55.00,
+        descricao: 'Vaso decorativo para sua casa',
+        imgProduto: '/images/produtos/lustre-02.jpg'
+
+      },
+
+
+
     ]);
- 
+
   },
 
   down: async (queryInterface, Sequelize) => {

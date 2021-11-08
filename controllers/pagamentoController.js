@@ -1,6 +1,6 @@
 const PagamentoController = {
     show: (req, res) => {
-        res.render('pagamento')
+        res.render('pagamento', {usuario:req.session.usuario})
     }  
 }
 
