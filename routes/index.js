@@ -6,4 +6,6 @@ const validaSession = require('../middlewares/validaSession');
 
 router.get('/', validaSession, IndexController.show)
 
+router.get('/loja/:categoria_id', validaSession, IndexController.showProductsBanner)
+
 module.exports = router;

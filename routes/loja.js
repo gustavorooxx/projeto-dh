@@ -6,6 +6,7 @@ const validaSession = require('../middlewares/validaSession');
 
 router.get('/loja',validaSession, ShopController.show)
 
-router.get('/produto/:id', validaSession, ShopController.showProduct)
+router.get('/loja/produto/:id', validaSession, ShopController.showProduct)
+
 
 module.exports = router;

@@ -13,10 +13,11 @@ const ShopController = {
 
         let { id } = req.params;
         
-        let produto = await Produto.findOne({where:{id:id}})
+        const produto = await Produto.findOne({where:{id:id}})
 
-        res.render("produto" , {usuario:req.session.usuario, produto:produto})
-    }
+        res.render("produto" , {usuario:req.session.usuario, produto: produto})
+    },
+
 
 }
 

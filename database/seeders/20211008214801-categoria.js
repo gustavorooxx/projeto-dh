@@ -6,7 +6,7 @@ module.exports = {
     await queryInterface.bulkInsert('categoria', [
       {
         id: '1',
-        nome: 'Mesas e Cadeiras'
+        nome: 'Móveis'
       },
 
       {
@@ -16,7 +16,7 @@ module.exports = {
 
       {
         id: '3',
-        nome: 'Sofás'
+        nome: 'Lustres'
       },
 
     ]);

@@ -61,7 +61,7 @@
             <section>
 
                 <% for(let produto of produtos) { %>
-                <article onclick="location.href='produto/<%= produto.id %>'">
+                <article onclick="location.href='/loja/produto/<%= produto.id %>'">
                    <div class="hover-div">Ver produto</div>                    
                    <img src="<%= produto.imgProduto %>" alt="<%= produto.nome %>">
                 <div>
