@@ -31,7 +31,10 @@
         
         <div class="pre-description">
           <h3 id="nome"> <%= produto.nome %> </h3>
-          <p class="valor" id="valor"> <span class="reais">R$</span> <%= produto.preco.replace('.',',') %> </p>
+          <div class="top-valor">
+          <span class="reais">R$</span>
+          <p class="valor" id="valor"><%= produto.preco.replace('.',',') %> </p>
+          </div>
           <p> <%= produto.descricao %></p>
 
           <span>03 disponíveis</span>

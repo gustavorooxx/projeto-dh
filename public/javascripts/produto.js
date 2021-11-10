@@ -46,39 +46,34 @@ const form = document.getElementById('form');
 
 const nomeProduto = document.getElementById('nome').innerText;
 const quantidade = document.getElementById('quantidade');
-const valor = parseFloat(document.querySelector("#valor").textContent.replace('R$ ',''))
-const url = parseFloat(window.location.pathname.replace('/produto/', ''));
+const valor = parseFloat(document.querySelector("#valor").textContent.replace(',' , '.'));
+const url = parseFloat(window.location.pathname.replace('/loja/produto/', ''));
 
 form.addEventListener('submit', event => {
   event.preventDefault();
+
+  console.log(valor)
+  console.log(url)
+  console.log(typeof quantidade.value)
 
   if(quantidade.value != ''){
     const produtos = {
       id: url,
       nome: nomeProduto,
-      valor: valor.toFixed(2), // 2 casas decimais
-      quantidade: quantidade.value,
+      valor: valor,
+      quantidade: parseFloat(quantidade.value),
       total: valor*quantidade
-      
     }
   
     carrinho.push(produtos);
     quantidade.value = '';
     updateCartLocalStorage();
+    
 
     alert("Adicionado ao carrinho!")
-
-    console.log(typeof produtos.id)
   }else{  
     alert("informe a quantidade")
   }
-
-
-
-
-
-  console.log(typeof quantidade.value)
-  console.log(valor)
 
 
 })

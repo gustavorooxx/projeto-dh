@@ -19,6 +19,8 @@ module.exports = (sequelize, DataType) => {
         
         // Um produto tem uma categoria
         Produto.belongsTo(models.Categoria, {as: 'categoria', foreignKey:'categoria_id'})
+        // Um produto tem uma cor
+        Produto.belongsTo(models.Cor, {as: 'cor', foreignKey:'cor_id'})
 
         // Um produto tem em muitos pedidos
         Produto.belongsToMany(models.Pedido, {

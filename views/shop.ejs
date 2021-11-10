@@ -20,13 +20,14 @@
             
             <div>
                 <h5>COR</h5>
-                    <ul>
-                        <li><a href="">Preto (15)</a></li>
-                        <li><a href="">Amarelo (32)</a></li>
-                        <li><a href="">Azul (4)</a></li>
-                        <li><a href="">Vermelho (12)</a></li>
-                        <li><a href="">Branco (54)</a></li>
-                        <li><a href="">Bege (29)</a></li>
+                    <ul id="cores" >
+                       
+                        <li><a id="selecionado" class="<%= cor_id == 1 ? 'destaque' : '' %>" href="/loja/cor/1">Preto (<%= preto.length %>)</a></li>
+                        <li><a id="selecionado" class="<%= cor_id == 2 ? 'destaque' : '' %>" href="/loja/cor/2">Amarelo (<%= amarelo.length %>)</a></li>
+                        <li><a id="selecionado" class="<%= cor_id == 4 ? 'destaque' : '' %>" href="/loja/cor/4">Azul (<%= azul.length %>)</a></li>
+                        <li><a id="selecionado" class="<%= cor_id == 5 ? 'destaque' : '' %>" href="/loja/cor/5">Vermelho (<%= vermelho.length %>)</a></li>
+                        <li><a id="selecionado" class="<%= cor_id == 6 ? 'destaque' : '' %>" href="/loja/cor/6">Branco (<%= branco.length %>)</a></li>
+                        <li><a id="selecionado" class="<%= cor_id == 3 ? 'destaque' : '' %>" href="/loja/cor/3">Bege (<%= bege.length %>)</a></li>
                     </ul>
             </div>
 
@@ -69,7 +70,6 @@
                    <span class="product-value"> R$ <%= produto.preco.replace('.',',') %></span>
                 </div>
                 </article>
-              <% console.log(produto) %>
                 <% } %>
 
             </section>
@@ -92,7 +92,7 @@
 
     <div class="view-all"><a href="">Ver tudo</a></div>
 </div>
-
+<script src="/javascripts/shop.js"></script>
 </body>
 
   <%- include('./repeat_views/footer'); %>

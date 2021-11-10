@@ -56,6 +56,11 @@ h3{
     display: flex;
 }
 
+.top-valor{
+    display: flex;
+    margin-top: 2%;
+}
+
 .pre-description span{
     font-size: 12px;
 }

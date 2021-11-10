@@ -18,6 +18,16 @@ module.exports = {
           key:'id'
         }
       },
+      cor_id: {
+        type: Sequelize.DataTypes.INTEGER, 
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'cor'
+          },
+          key:'id'
+        }
+      },
       imgProduto: {type: Sequelize.DataTypes.STRING(45), allowNull: false}
     });
   },
