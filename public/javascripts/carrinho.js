@@ -16,8 +16,8 @@ function getProdutos() {
     
     const divProdutos = document.getElementById('prev-cart')
     
-    if (!localStorage.getItem('carrinho')) {
-        let semProdutos = `<p class="product-name" >Sem Produtos no carrinho</p>`
+    if (!localStorage.getItem('carrinho') || localStorage.getItem('carrinho') == '[]' ) {
+        let semProdutos = `<p class="sem-produtos"> <img src="/images/tenor.gif"></img></p>`
         divProdutos.innerHTML = semProdutos;
     } else {
         // console.log('tem produtos')
