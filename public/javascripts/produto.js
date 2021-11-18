@@ -36,7 +36,8 @@ function descriptionBtn() {
 const cartLocalStorage = JSON.parse(localStorage.getItem('carrinho'));
 // se localStorage.getItem que recebe 'carrinho' é diferente de null, let carrinho armazena cartLocalStorage
 // se localStorage.getItem('carrinho') estiver vazia let carrinho armazena array vazio
-let carrinho = localStorage.getItem('carrinho') !== null ? cartLocalStorage : [];
+const carrinho = localStorage.getItem('carrinho') !== null ? cartLocalStorage : [];
+console.log(carrinho)
 
 const updateCartLocalStorage = () =>{
   localStorage.setItem('carrinho', JSON.stringify(carrinho))
@@ -51,30 +52,36 @@ const url = parseFloat(window.location.pathname.replace('/loja/produto/', ''));
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-
-  console.log(valor)
-  console.log(url)
-  console.log(typeof quantidade.value)
-
-  if(quantidade.value != ''){
-    const produtos = {
-      id: url,
-      nome: nomeProduto,
-      valor: valor,
-      quantidade: parseFloat(quantidade.value),
-      total: valor*quantidade
-    }
-  
-    carrinho.push(produtos);
+//localizando se existe no carrinho o produto a ser adicionado
+ let locaId = carrinho.findIndex((item) => item.id == url);
+ //se não localizar retorna -1, se for maior é pq existe
+ if(locaId > -1){
+    console.log("tem desse produto!")
+    // soma naquela posição a quantidade
+    
+    carrinho[locaId].quantidade += Number(quantidade.value)
+    const total = carrinho[locaId].quantidade * valor;
+    carrinho[locaId].total = total;
+    // carrinho[locaId].total = Number(valor)*Number(quantidade.value)
     quantidade.value = '';
     updateCartLocalStorage();
-    
-
     alert("Adicionado ao carrinho!")
-  }else{  
-    alert("informe a quantidade")
-  }
+ }else {
 
+   carrinho.push({
+       id: url,
+       nome: nomeProduto,
+       valor: valor,
+       quantidade: Number(quantidade.value),
+       total: valor*Number(quantidade.value)
+     })
+ 
+     quantidade.value = '';
+     updateCartLocalStorage();
+     alert("Adicionado ao carrinho!")
+ }
 
 })
+
+
 

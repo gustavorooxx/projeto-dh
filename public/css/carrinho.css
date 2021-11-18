@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body{
     overflow-x: hidden;
 }
@@ -9,25 +15,26 @@ body{
 
 .cart-container{
     display: flex;
+    justify-content: space-between;
     margin-top: 5%;
 }
 
 .prev-cart{
     display: flex;
     flex-direction: column;
-}
-
-.prev-cart p{
-    margin: 20px;
+    width: 100%;
 }
 
 .prev-cart span{
     margin: 20px;
     font-size: 12px;
+    width: 15%;
 }
 
 .fa-times-circle{
     color: #939393;
+    width: 10%;
+    cursor: pointer;
 }
 
 .product{
@@ -36,29 +43,51 @@ body{
     height: 15%;
 }
 
+#id{
+    display: none;
+}
+
 .product-name{
     color: black;
+    width: 40%;
+    font-size: 12px
 }
 
 .product-value{
     font-size: 12px;
     color: #939393;
+    width: 15%;
 }
 
 .quantidade{
     font-size: 12px;
     color: #939393;
-    width: 10%;
+    width: 20%;
     margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    
+}
+
+
+
+.quantidade p {
+    width: 25%;
+    margin: 10%;
+    font-size: 14px;
+    background-color: #003884;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
 }
 
 .quantidade input{
-    width: 85%;
+ 
     outline: none;
-    margin-top: 5px;
+    width: 60%;
     border: 1px solid #939393;
     border-radius: 2px;
     text-align: center;
@@ -219,6 +248,12 @@ body{
     .cart-total{
         width: 100%;
     }
+
+    .quantidade p {
+    display: none;
+    }
+
+    
 }
 
 @media (max-width: 768px) {
