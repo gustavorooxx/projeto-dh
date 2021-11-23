@@ -14,7 +14,7 @@
     
   <div class="page-container">
 
-    <h2>CARRINHO</h2>
+    <h2 style="font-weight: 300;">CARRINHO</h2>
 
     <div class="cart-container">
 
@@ -25,7 +25,7 @@
     </div>
 
       <div class="cart-total" >
-        <h3>TOTAL DA COMPRA</h3>
+        <h3>CALCULAR O FRETE</h3>
 
         <div class="resume">
 
@@ -37,20 +37,19 @@
           <div class="shipping">
             <p>Frete</p>
             <div>
-              <input type="radio" id="retire" name="shipping" value="Retire">
+              <input onclick="getTotal()" type="radio" id="retire" name="shipping" value="Retirar na loja" checked>
               <label for="retire">Retire na Loja</label><br>
-              <input type="radio" id="sedex" name="shipping" value="SEDEX">
-              <label for="sedex">SEDEX</label><br>
-              <input type="radio" id="pac" name="shipping" value="PAC">
-              <label for="pac">PAC</label>
+              <input onclick="getTotal()" type="radio" id="sedex" name="shipping" value="35.90" >
+              <label for="sedex">SEDEX (35.90)</label><br>
+              <input onclick="getTotal()" type="radio" id="pac" name="shipping" value="29.99">
+              <label for="pac">PAC (29.90)</label>
             </div>
           </div>
 
           <a href="">Alterar Endereço de Entrega </a>
           
-          <div class="total" id="total">
-            <p>TOTAL</p>
-            <p class="total-value" id="total-value">R$ </p>
+          <div class="total" id="total-value">
+
           </div>
 
             <button type="submit">Ir para o checkout</button>

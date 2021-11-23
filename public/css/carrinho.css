@@ -118,8 +118,8 @@ body{
 
 .cart-total h3{
     text-align: center;
-    font-weight: 400;
-    text-decoration-line: underline;
+    font-weight: bold;
+    color: #003884;;
 }
 
 .cart-total p {
@@ -134,7 +134,6 @@ body{
 
 .resume a{
     font-size: small;
-    margin-top: 10%;
     color: #003884;
 }
 
@@ -150,6 +149,7 @@ body{
 .shipping{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10%;
 }
 
 .shipping p {
@@ -166,7 +166,7 @@ body{
     align-items: center;
     border-top: 0.1px solid #939393;
     border-top-style: dashed;
-    margin-top: 3%;
+    margin-top: 10%;
 }
 
 .total-value{
@@ -197,7 +197,22 @@ body{
 
 .back-shop{
     cursor: pointer;
+    background-color: #003884;
+    width: 15%;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
 }
+
+.back-shop:hover    {
+    background-color: #0059d4;
+}
+
 
 .back-shop-icon{
     margin-right: 1%;

@@ -66,6 +66,8 @@ form.addEventListener('submit', event => {
     quantidade.value = '';
     updateCartLocalStorage();
     alert("Adicionado ao carrinho!")
+
+    window.location.reload();
  }else {
 
    carrinho.push({
@@ -79,6 +81,8 @@ form.addEventListener('submit', event => {
      quantidade.value = '';
      updateCartLocalStorage();
      alert("Adicionado ao carrinho!")
+     
+     window.location.reload();
  }
 
 })

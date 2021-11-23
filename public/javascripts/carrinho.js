@@ -9,6 +9,7 @@ const updateCartLocalStorage = () => {
 
 
 getProdutos();
+getTotal();
 getSubTotal();
 
 //EXIBINDO PRODUTOS
@@ -44,6 +45,34 @@ function getProdutos() {
         
     }
     
+}
+
+//EXIBINDO TOTAL DO PRODUTO
+function getTotal(){
+    var total = 0;
+    var subTotalGeral = 0;
+
+    for (let index = 0; index < carrinho.length; index++) {
+        subTotalGeral += carrinho[index].total;
+    }
+
+    const frete = document.querySelector('input[name="shipping"]:checked').value;
+    const totalDiv = document.getElementById('total-value')
+    
+    if(frete == "Retirar na loja"){
+        total += subTotalGeral;
+
+        totalDiv.innerHTML = `<p>TOTAL</p>
+        <p class="total-value" >R$ ${total.toFixed(2)} </p>`
+        console.log(total)
+    } else{
+        total = subTotalGeral + parseFloat(frete);
+        totalDiv.innerHTML = `<p>TOTAL</p>
+        <p class="total-value" >R$ ${total.toFixed(2)} </p>`
+        
+        console.log(typeof frete)
+        console.log(total)
+    }
 }
 
 
@@ -111,7 +140,6 @@ for (let i = 0; i < adds.length; i++) {
         
     })
 }
-
 
 const subs = document.querySelectorAll('#subtract')
 //SUBTRAINDO QUANTIDADE DO PRODUTO
