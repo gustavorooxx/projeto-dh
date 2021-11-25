@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .page-container{
@@ -36,15 +36,20 @@ body{
 .buttons{
     display: flex;
     width: 100%;
+    height: 65px;
+}
+
+.alert {
+ position: absolute !important;
+ margin-top: 5%;   
 }
 
 .buttons div{
     width: 100%;
-    height: 80%;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .buttons div h5{
@@ -112,7 +117,16 @@ form button{
     color: white;
     border: none;
     border-radius: 5px;
-    background-color: #003884;
+    background-color: #003884 !important;
+    font-size: 12px;
+}
+
+form button:hover{
+    background-color: #0059d4 !important
+}
+
+form button:focus{
+    outline: none !important;
 }
 
 

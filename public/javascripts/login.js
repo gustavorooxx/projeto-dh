@@ -1,3 +1,5 @@
+
+
 function loginBtn(){
 
     var btnLogin = document.getElementById('btn-login')
@@ -37,3 +39,12 @@ function registerBtn(){
 
     
 }
+
+var loginForm = document.getElementById('loginForm')
+
+loginForm.addEventListener('click', function(e){
+   
+    if(alert == true){
+        console.log('ok')
+    }
+})

@@ -3,7 +3,7 @@ const {Produto} = require('../database/models');
 const IndexController = {
     show: async (req, res) => {
 
-        //Móveis como produtos em alta
+        //Pordutos da categoria "móveis" como produtos em alta
         const produtoEmAlta = await Produto.findAll({where:{ categoria_id: 1}})
 
         res.render('index', {usuario:req.session.usuario, produtosEmAlta: produtoEmAlta});

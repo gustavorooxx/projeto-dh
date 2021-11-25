@@ -15,6 +15,7 @@ body{
 h2{
     margin: 0px 0px 40px 0px;
     font-weight: 300;
+    cursor: context-menu;
 }
 
 /* FILTROS */
@@ -66,6 +67,31 @@ h5{
     color: #939393;
 }
 
+.filters p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    font-size: 11px;
+    width: 40%;
+    height: 30px;
+    background-color: #003884;
+    color: #fff;
+    cursor: context-menu;
+    letter-spacing: 1px;
+}
+
+
+.filters p i{
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 11px;
+}
+
+h5{
+    cursor: context-menu;
+}
+
 input[type="number"]{
     width: 50%;
     margin-bottom: 5%;
@@ -83,6 +109,7 @@ input[type="number"]{
     font-size: 10px;
     letter-spacing: .5px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .apply:hover{
@@ -110,6 +137,7 @@ input[type="number"]{
     height: 280px;
     margin-left: 5%;
     margin-bottom: 12%;
+    cursor: pointer;
 }
 
 
@@ -277,6 +305,15 @@ img{
     .page-container{
     padding: 18% 10% 5% 10%;
 }
+
+.filters p {
+    width: 50%;
+}
+
+.filters p i {
+    margin-left: 0;
+}
+
 }
 
 @media (max-width: 668px) {
@@ -304,16 +341,8 @@ img{
         text-align: center;
     }
 
-    .title-filter{
-        font-size: 14px;
-        display: flex;
-        width: 50%;
-    }
-
-    .fa-filter{
-        margin-bottom: 10%;
-        font-size: 20px;
-        margin-left: 5%;
+    .filters p{
+        width: 100%;
     }
 
     .pagination-container {

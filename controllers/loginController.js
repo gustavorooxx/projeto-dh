@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 const LoginController = {
     show: (req, res) => {
-        res.render('login');
+        res.render('login' , {usuario:req.session.usuario, alerta: false});
     },
 
     login: async (req, res) => {
@@ -17,18 +17,19 @@ const LoginController = {
         // console.log(usuario)
         //Se não existir usuário, retorna erro
         if(!usuario){
-            return res.status(403).json({erro:1, msg:"Acesso negado, não existe esse usuário"})
+            return res.render('login', {alerta: true, mensagem: "Usuário inexistente! ", mensagem2:"Cadastre-se na aba CADASTRO"})
         }
 
-        // Existindo o usuário, validar a senha dele (bcrypt) primeiro parametro(senha sem criptografar) 
-        // segundo(senha criptografada)
+        // Existindo o usuário, validar a senha dele (bcrypt) primeiro parametro(senha sem criptografar)segundo(senha criptografada)
         // Senha inválida retorn erro
         if(!bcrypt.compareSync(senha, usuario.senha)){
-            return res.status(403).json({erro:1, msg:"Acesso negado, senha inválida"})
+            return res.render('login', {alerta: true, mensagem: "Senha inválida! ", mensagem2: "Tente novamente."})
         }
 
         //removendo informação sensível do usuário
         usuario.senha = undefined;
+
+        
 
         req.session.usuario = usuario; 
 

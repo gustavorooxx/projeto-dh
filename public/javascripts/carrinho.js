@@ -64,11 +64,15 @@ function getTotal(){
 
         totalDiv.innerHTML = `<p>TOTAL</p>
         <p class="total-value" >R$ ${total.toFixed(2)} </p>`
+
+        localStorage.setItem('frete', frete )
         console.log(total)
     } else{
         total = subTotalGeral + parseFloat(frete);
         totalDiv.innerHTML = `<p>TOTAL</p>
         <p class="total-value" >R$ ${total.toFixed(2)} </p>`
+
+        localStorage.setItem('frete', parseFloat(frete))
         
         console.log(typeof frete)
         console.log(total)
@@ -196,7 +200,23 @@ for (let i = 0; i < exclude.length; i++) {
     })
 }
 
+const checkout = document.getElementById('goCheckout');
 
+checkout.addEventListener('click', function(e) {
+    
+    if(localStorage.carrinho == null || localStorage.carrinho == '[]'){
+        e.preventDefault();
+        Swal.fire({
+            icon: 'success',
+            title: 'Sem produtos no carrinho, redirecionando para loja...',
+            confirmButtonColor: "#003884",
+          })
+
+          setTimeout(function(){
+            window.location.href = '/loja'
+         }, 3000);
+    }
+})
 
 
 

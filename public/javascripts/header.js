@@ -17,12 +17,12 @@ function myFunction(){
     }
 }
 
-//valor do
+//valor do Carrinho localStorage
 function getCartHeader(){
     
     const spanTotal = document.getElementById('total-cart');
     const spanTotalMobile = document.getElementById('total-cart-mobile')
-    console.log(spanTotal)
+    
     
     if (!localStorage.getItem('carrinho') || localStorage.getItem('carrinho') == '[]' ) {
         spanTotal.innerText = '(R$ 0,00)'
@@ -30,7 +30,6 @@ function getCartHeader(){
         var subtotalGeral = 0;
         for (let index = 0; index < cart.length; index++) {
             subtotalGeral += cart[index].total;
-            console.log(cart[index].total)
         }
         spanTotal.innerText = '('+ 'R$ ' + subtotalGeral.toFixed(2) + ')';
         spanTotalMobile.innerText = '('+ 'R$' + subtotalGeral.toFixed(2) + ')';

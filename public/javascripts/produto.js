@@ -1,4 +1,5 @@
 
+
 function moreInfoBtn() {
   
   var descriptionBtn = document.getElementById("btn-description");
@@ -34,10 +35,11 @@ function descriptionBtn() {
 }
 
 const cartLocalStorage = JSON.parse(localStorage.getItem('carrinho'));
-// se localStorage.getItem que recebe 'carrinho' é diferente de null, let carrinho armazena cartLocalStorage
-// se localStorage.getItem('carrinho') estiver vazia let carrinho armazena array vazio
+// se localStorage.getItem que recebe 'carrinho' é diferente de null, const carrinho armazena cartLocalStorage
+// se localStorage.getItem('carrinho') estiver vazia const carrinho armazena array vazio
 const carrinho = localStorage.getItem('carrinho') !== null ? cartLocalStorage : [];
 console.log(carrinho)
+console.log(cartLocalStorage)
 
 const updateCartLocalStorage = () =>{
   localStorage.setItem('carrinho', JSON.stringify(carrinho))
@@ -65,9 +67,17 @@ form.addEventListener('submit', event => {
     // carrinho[locaId].total = Number(valor)*Number(quantidade.value)
     quantidade.value = '';
     updateCartLocalStorage();
-    alert("Adicionado ao carrinho!")
+    
+    Swal.fire({
+      icon: 'success',
+      title: nomeProduto + ' já está no Carrinho!',
+      confirmButtonColor: "#003884",
+    })
 
-    window.location.reload();
+    setTimeout(function(){
+      window.location.href = '/loja'
+   }, 2500);
+
  }else {
 
    carrinho.push({
@@ -80,9 +90,16 @@ form.addEventListener('submit', event => {
  
      quantidade.value = '';
      updateCartLocalStorage();
-     alert("Adicionado ao carrinho!")
+
+     Swal.fire({
+      icon: 'success',
+      title: nomeProduto + ' já está no Carrinho!',
+      confirmButtonColor: "#003884",
+    })
      
-     window.location.reload();
+     setTimeout(function(){
+      window.location.href = '/loja'
+   }, 2500);;
  }
 
 })
