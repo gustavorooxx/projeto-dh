@@ -29,12 +29,10 @@ const LoginController = {
         //removendo informação sensível do usuário
         usuario.senha = undefined;
 
-        
-
         req.session.usuario = usuario; 
 
-
         res.redirect("/"); 
+
 
     }
 

@@ -207,7 +207,7 @@ checkout.addEventListener('click', function(e) {
     if(localStorage.carrinho == null || localStorage.carrinho == '[]'){
         e.preventDefault();
         Swal.fire({
-            icon: 'success',
+            icon: 'error',
             title: 'Sem produtos no carrinho, redirecionando para loja...',
             confirmButtonColor: "#003884",
           })

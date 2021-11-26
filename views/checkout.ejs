@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
-    <link rel="stylesheet" href="/css/styleCheckout.css">
+    <link rel="stylesheet" href="/css/checkout.css">
 
 </head>
 
 <%- include('./repeat_views/header'); %>
 
-<body>
+    <body>
 
-    
-    <div class="todos">
-    <p id="dados"> Dados da Conta</p>
-    <p id="envio">Opções de envio</p>
-    <p id="carrinho">Seu Carrinho</p>
-    <p id="pagamento">Forma de Pagamento</p>
-    <p id="resumo">Resumo do seu pedido</p>
-    <label id="um" for="email"> Para finalizar a compra informe seu endereço de e-mail:</label>
-    <textarea id="email"id="story" name="campo">Endereço de e-mail</textarea>
+        <div class="page-container">
 
-    <form>
-    <div>
-    <input class="form-check-input" id="opc1" type="radio" name="opc" value="text">
-    <label class="form-check-label" for="opc1">Opção de envio 1</label>
-    
-    <br>
-    <br>
-    <input id="opc2" type="radio" name="opc" value="text" checked>
-    <label for="opc2">Opção de envio 2 </label><br>
-    <br>
-    </div>
-    </form>
-    
-    <div>
-    <label id="Car1"> Produto: </label>
-    </div>
-    
-    <div>
-    <label id="Car2"> Quantidade: </label>
-    </div>
+            <h2 style="font-weight: 300;">SEU PEDIDO</h2>
 
-    <div>
-    <label id="Car3"> Valor: </label>
-    </div>
+            <div class="checkout-container">
 
-    <div class="pag">
-    
-        <input id="cart" type="radio" name="pag" value="text" checked>
-        <label for="cart">Cartão de crédito</label>
-        
-        <br>
-        <hr>
-        <br>
-        <input id="boleto" type="radio" name="pag" value="text" >
-        <label for="boleto">Boleto</label>
+                <div class="bold border">
+                    <p>Produtos</p>
+                    <p>Total</p>
+                </div>
+
+                <div class="thin" id="products">
+                    <!-- valor inserido via JS -->
+                </div>
+
+                <div class="border" id="subtotal">
+                    <!-- valor inserido via JS -->
+                </div>
+
+                <div class="border" id="shipping">
+                    <!-- valor inserido via JS -->
+                </div>
+
+                <div class="user-info">
+                    <p style="display: none;">#<%usuario.id %></p> 
+                    <p> <%= usuario.nome %> </p>
+                    <p><%= usuario.enderecoEntrega %></p>
+                </div>
+
+                <div class="bold border" id="total">
+                    <!-- valor inserido via JS -->
+                </div>  
+            </div>
+
+            <div class="payment-container">
+                <h3>MÉTODO DE PAGAMENTO</h3>
+
+                <div>
+                      <input onclick="getTotal()" type="radio" id="retire" name="shipping" value="Retirar na loja" checked>
+                      <label for="retire">Na entrega/retira</label><br>
+                      <input onclick="getTotal()" type="radio" id="sedex" name="shipping" value="35.90" >
+                      <label for="sedex">Cartão de crédito</label><br>
+                    </div>
+                    
+                    <button>CONFIRMAR COMPRA</button>
+
+                </div>
         </div>
 
-</div>
+    <!-- Scripts -->
+    <script src="/javascripts/checkout.js"></script>
 
-</body>
+    </body>
 
-<%- include('./repeat_views/footer'); %>
+    <%- include('./repeat_views/footer'); %>
 
 </html>

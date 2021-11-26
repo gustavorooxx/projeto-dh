@@ -76,7 +76,7 @@ form.addEventListener('submit', event => {
 
     setTimeout(function(){
       window.location.href = '/loja'
-   }, 2500);
+   }, 2000);
 
  }else {
 
@@ -99,7 +99,7 @@ form.addEventListener('submit', event => {
      
      setTimeout(function(){
       window.location.href = '/loja'
-   }, 2500);;
+   }, 2000);;
  }
 
 })

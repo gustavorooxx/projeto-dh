@@ -1,0 +1,92 @@
+body{
+    overflow-x: hidden;
+}
+
+.page-container{
+
+    padding: 10% 10% 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Checkout */
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    color: #939393;
+    align-items: center;
+    width: 50%;
+}
+
+
+.checkout-container div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#products{
+    flex-direction: column;
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+.thin{
+    font-weight: 300;
+}
+
+.border{
+    border-bottom: 0.5px solid #9393937a;
+}
+
+#subtotal{
+    border-top: 0.5px solid #9393937a;
+}
+
+#total{
+    border-top: 0.5px solid #9393937a;
+    margin-top: 5%;
+}
+ .user-info, .user-info p{
+     flex-direction: column;
+     margin-bottom: 0;
+ }
+
+
+/* Método de pagamento */
+
+.payment-container{
+    margin-top: 20px;
+    text-align: center;
+    width: 50%;
+    border-bottom: 1px solid #9393937a;
+}
+
+.payment-container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.payment-container button{
+    margin-bottom: 5%;
+    cursor: pointer;
+    background-color: #008000;
+    width: 35%;
+    height: 35px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.payment-container button:hover{
+    background-color: #0aad0a;
+}
