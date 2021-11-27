@@ -9,96 +9,104 @@ getCheckout();
 
 
 function getCheckout() {
-    
+
     //Produtos
-const products = document.getElementById('products')
+    const products = document.getElementById('products')
 
-let produtosCarrinho = ''
+    let produtosCarrinho = ''
 
-for (const produto of produtos) {
-    produtosCarrinho +=
-  `
+    for (const produto of produtos) {
+        produtosCarrinho +=
+            `
   <div class"product">
     <p>${produto.nome} x ${produto.quantidade}</p>
     <p>R$ ${parseFloat(produto.valor * produto.quantidade).toFixed(2)}</p>
   </div> 
   `
-}
+    }
 
-products.innerHTML = produtosCarrinho;
-
-
-// Subtotal
-
-const subtotalDiv = document.getElementById('subtotal')
+    products.innerHTML = produtosCarrinho;
 
 
-var subTotalGeral = 0;
-for (let index = 0; index < produtos.length; index++) {
-    subTotalGeral += produtos[index].total;
-}
+    // Subtotal
 
-subtotalDiv.innerHTML = 
- `
+    const subtotalDiv = document.getElementById('subtotal')
+
+
+    var subTotalGeral = 0;
+    for (let index = 0; index < produtos.length; index++) {
+        subTotalGeral += produtos[index].total;
+    }
+
+    subtotalDiv.innerHTML =
+        `
 <p class="bold">Subtotal</p>
 <p class="thin">R$ ${subTotalGeral.toFixed(2)}</p>
 `
 
-//Frete
+    //Frete
 
-let freteDiv = document.getElementById('shipping');
+    let freteDiv = document.getElementById('shipping');
 
-// console.log("FRETE " + typeof frete);
+    // console.log("FRETE " + typeof frete);
 
-if(frete == "Retirar na loja"){
-freteDiv.innerHTML = `
+    if (frete == "Retirar na loja") {
+        freteDiv.innerHTML = `
 <p class="bold">Envio</p>
 <p class="thin">${frete}</p>
 `
-} else {
-    frete = parseFloat(frete).toFixed(2)
-    freteDiv.innerHTML = `
+    } else {
+        frete = parseFloat(frete).toFixed(2)
+        freteDiv.innerHTML = `
 <p class="bold">Envio</p>
 <p class="thin">R$ ${frete}</p>
 `
-}
-//Total
+    }
+    //Total
 
-const totalDiv = document.getElementById('total');
-const total = subTotalGeral + parseFloat(frete);
-// console.log(typeof total)
+    const totalDiv = document.getElementById('total');
+    const total = subTotalGeral + parseFloat(frete);
+    // console.log(typeof total)
 
-if(frete == "Retirar na loja"){
-    totalDiv.innerHTML = 
-`
+    if (frete == "Retirar na loja") {
+        totalDiv.innerHTML =
+            `
 <p>Total</p>
 <p>R$ ${subTotalGeral.toFixed(2)}</p>
 `
-} else {
+    } else {
 
-    totalDiv.innerHTML = 
-    `
+        totalDiv.innerHTML =
+            `
     <p>Total</p>
     <p>R$ ${total.toFixed(2)}</p>
     `
-    
-}
+
+    }
 
 }
 
 
 const id = document.querySelector("body > div.page-container > div.checkout-container > div.user-info > p:nth-child(1)").textContent
 
+const btn = document.querySelector("body > div.page-container > div.payment-container > button")
 
-async function novoPedido() {
-    let novoPedido = await Pedido.create({
-        dataPedido: new Date(), 
-        usuario_id: email, 
-        status: 'Pedido Confirmado',
-        status_id: 1
-    });
-    
-}
+btn.addEventListener('click', function(){
+
+    console.log('clicou')
+    Swal.fire({
+        icon: 'success',
+        title: 'Pedido solicitado com sucesso ! Continue comprando...',
+        confirmButtonColor: "#003884",
+    })
+
+    localStorage.clear();
+
+    setTimeout(function () {
+        window.location.href = '/loja'
+    }, 3500);
+
+})
 
 
 

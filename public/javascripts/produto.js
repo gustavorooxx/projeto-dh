@@ -56,6 +56,8 @@ form.addEventListener('submit', event => {
   event.preventDefault();
 //localizando se existe no carrinho o produto a ser adicionado
  let locaId = carrinho.findIndex((item) => item.id == url);
+
+if(quantidade.value !== ''){
  //se não localizar retorna -1, se for maior é pq existe
  if(locaId > -1){
     console.log("tem desse produto!")
@@ -101,6 +103,14 @@ form.addEventListener('submit', event => {
       window.location.href = '/loja'
    }, 2000);;
  }
+} else{
+  Swal.fire({
+    icon: 'error',
+    title: 'Coloque a quantidade do produto!',
+    confirmButtonColor: "#003884",
+  })
+}
+
 
 })
 
