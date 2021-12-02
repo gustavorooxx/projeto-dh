@@ -8,7 +8,7 @@ module.exports = {
      {
      
      id: {type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement:true},
-     dataPedido: {type: Sequelize.DataTypes.DATE, allowNull: false},
+     dataPedido: {type: Sequelize.DataTypes.STRING(256), allowNull: false},
      usuario_id: {
        type: Sequelize.DataTypes.INTEGER, 
        allowNull: false,

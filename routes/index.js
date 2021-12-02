@@ -8,4 +8,7 @@ router.get('/', validaSession, IndexController.show)
 
 router.get('/loja/categoria/:categoria_id', validaSession, IndexController.showProductsBanner)
 
+// rota para /busca
+router.get('/search', IndexController.busca )
+
 module.exports = router;

@@ -25,13 +25,14 @@ function getCartHeader(){
     
     
     if (!localStorage.getItem('carrinho') || localStorage.getItem('carrinho') == '[]' ) {
-        spanTotal.innerText = '(R$ 0,00)'
+        spanTotal.innerText = '(R$0,00)';
+        spanTotalMobile.innerText = '(R$0,00)';
     } else{
         var subtotalGeral = 0;
         for (let index = 0; index < cart.length; index++) {
             subtotalGeral += cart[index].total;
         }
-        spanTotal.innerText = '('+ 'R$ ' + subtotalGeral.toFixed(2) + ')';
+        spanTotal.innerText = '('+ 'R$' + subtotalGeral.toFixed(2) + ')';
         spanTotalMobile.innerText = '('+ 'R$' + subtotalGeral.toFixed(2) + ')';
     }
 

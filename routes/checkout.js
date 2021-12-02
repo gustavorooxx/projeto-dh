@@ -7,6 +7,6 @@ const validaSession = require('../middlewares/validaSession')
 
 router.get('/checkout', validaSessionCheckout, CheckoutController.show)
 
-router.get('/loja', validaSession, CheckoutController.newOrder)
+router.post('/minhaconta/pedidos', validaSession, CheckoutController.newOrder)
 
 module.exports = router; 

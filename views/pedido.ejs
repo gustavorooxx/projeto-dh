@@ -25,17 +25,28 @@
                     <p>Produtos</p>
                     <p>Total</p>
                 </div>
-
+               
                 <div class="thin" id="products">
-                    <!-- valor inserido via JS -->
+                    <!-- PRODUTOS -->
+                    <% let total = 0; %>
+                    <% for(let pedido of pedidos) { %>
+                        <% total += parseFloat(pedido.valor_total) %>
+                        <div >
+                            <p> <%= pedido.nome %> x <%= pedido.quantidade %></p>
+                            <p>R$ <%= pedido.valor_total %></p>
+                          </div> 
+                    <% } %>
                 </div>
 
                 <div class="border" id="subtotal">
-                    <!-- valor inserido via JS -->
+                    <!-- SUBTOTAL -->
+                    <p class="bold">Subtotal</p>
+                    <p class="thin">R$ <%= total %> </p>
                 </div>
 
                 <div class="border" id="shipping">
-                    <!-- valor inserido via JS -->
+                    <!-- FRETE -->
+                    
                 </div>
 
                 <div class="user-info">
@@ -49,26 +60,8 @@
                 </div>  
             </div>
 
-            <div class="payment-container">
-                <h3>MÉTODO DE PAGAMENTO</h3>
-            
-                <form action="/minhaconta/pedidos" method="POST">
-                    <input type="hidden" name="produtos" id="produtos">
-                <div>
-                      <input onclick="getTotal()" type="radio" id="retire" name="payment" value="Na entrega/retira" checked> 
-                      <label for="retire">Na entrega/retira</label><br>
-                      <input onclick="getTotal()" type="radio" id="sedex" name="payment" value="Cartão de crédito" >
-                      <label for="sedex">Cartão de crédito</label><br>
-                </div>
-                    
-                    <button id="btn-confirm" type="submit">CONFIRMAR COMPRA</button>
-                </form>
-
-            </div>
         </div>
 
-    <!-- Scripts -->
-    <script src="/javascripts/checkout.js"></script>
 
     </body>
 

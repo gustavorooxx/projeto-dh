@@ -1,4 +1,6 @@
 const {Produto} = require('../database/models');
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op;
 
 const IndexController = {
     show: async (req, res) => {
@@ -35,6 +37,45 @@ const IndexController = {
             cor_id: null
             
         })
+    },
+
+    busca: async (req, res) => {
+        //cores
+        const preto = await Produto.findAll({where: {cor_id:1}})
+        const amarelo = await Produto.findAll({where: {cor_id:2}})
+        const bege = await Produto.findAll({where: {cor_id:3}})
+        const azul = await Produto.findAll({where: {cor_id:4}})
+        const vermelho = await Produto.findAll({where: {cor_id:5}})
+        const branco = await Produto.findAll({where: {cor_id:6}})
+
+        //Guardar a string buscada em uma variavel busca
+        var {search} = req.query;
+
+        //Pesquisa com operador
+        const produtos = await Produto.findAll({
+            where: {
+                nome:{
+                    [Op.like]: `%${search}%`
+                }
+            }    
+            })
+        
+       
+        // Renderização
+        res.render('shop', {
+            usuario:req.session.usuario, 
+            produtos: produtos,
+            preto: preto,
+            amarelo: amarelo,
+            bege:bege,
+            azul: azul,
+            vermelho: vermelho,
+            branco: branco,
+            cor_id: null
+            
+        })
+
+      
     }
 
 }

@@ -36,6 +36,11 @@ body{
     line-height: 2;
 }
 
+.usuario ul .destaque{
+    color: #000 !important;
+    font-weight: bold;
+}
+
 .usuario ul li a{
     text-decoration: none;
     color: #939393;
@@ -47,6 +52,80 @@ body{
 
 .usuario ul li a:focus{
     color: #939393;
+}
+
+.flex{
+    display: flex;
+}
+
+.none{
+    display: none;
+}
+
+#detalhes{
+    width: 100vw;
+    justify-content: center;
+}
+
+#alerta{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#alerta p{
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: .25rem;
+    border-color: #f5c6cb;
+    border: 1px solid transparent;
+    height: 45px;
+    font-weight: bold;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+}
+
+#alerta p button{
+    background: none;
+    border: 1px solid transparent;
+    font-size: 16px;
+    color: #b57a7f;
+    cursor: pointer;
+}
+
+#alerta p button:hover{ 
+color: #211810;
+}
+
+form{
+    width: 80%;
+}
+
+form p{
+    font-weight: bold;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+label input{
+    height: 45px;
+    border: 1px solid #939393;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+#endereco{
+    width: 100vw;
+    justify-content: center;
 }
 
 .compras{
@@ -85,9 +164,13 @@ body{
     background-color: #003884;
 }
 
-.fiscal-note{
+#pedidos{
+    flex-wrap: wrap;
+}
+
+#pedido{
     width: 200px;
-    height: 300px;
+    height: 200px;
     border: 1px solid #cdcd30;
     border-bottom: dashed 2px#cdcd30;
     display: flex;
@@ -95,6 +178,12 @@ body{
     align-items: center;
     background-color: #ffffc7;
     border-radius: 5px;
+    
+}
+
+.fiscal-note{
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
 .fiscal-note h3{
@@ -107,11 +196,7 @@ body{
     flex-direction: column
 }
 
-.products p {
-    font-weight: 500;
-}
-
 .products span{
     font-size: 12px;
-    text-decoration: underline;
 }
+

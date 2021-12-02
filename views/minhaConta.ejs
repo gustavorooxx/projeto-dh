@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta</title>
     <link rel="stylesheet" href="/css/minhaConta.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    
 </head>
 
 <body>
@@ -13,6 +16,12 @@
     <%- include('./repeat_views/header'); %>
 
 <div class="page-container">
+
+    <% if(alerta) { %>
+        <div id="alerta">
+        <p><%= mensagem %> <%= mensagem2 %> <button id="alerta-close">x</button></p>
+        </div>
+     <% } %>
 
     <!-- Avatar do usuário -->
     <section class="usuario">
@@ -24,10 +33,10 @@
         <br>
         <!-- Menu do Usuário -->
         <ul>
-            <li><a href="">Pedidos</a></li>
-            <li><a href="">Detalhes da conta</a></li>
-            <li><a href="">Atualizar Endereço</a></li>
-            <li><a href="">Sair</a></li>
+            <li><a class="<%= id == 'pedidos' ? 'destaque' : '' %>" href="/minhaconta/pedidos">Pedidos</a></li>
+            <li><a class="<%= id == 'editar' ? 'destaque' : '' %>" href="/minhaconta/editar">Detalhes da conta</a></li>
+            <li><a class="<%= id == 'endereco' ? 'destaque' : '' %>" href="/minhaconta/endereco">Atualizar Endereço</a></li>
+            <li><a class="<%= id == 'logout' ? 'destaque' : '' %>" href="/minhaconta/logout">Sair</a></li>
         </ul>
     </section>
 
@@ -35,7 +44,7 @@
     <!-- Exibição menu -->
 
     <!-- PEDIDOS -->
-    <section class="compras" id="pedidos">
+    <section class="compras"  >
         <!-- Sem pedidos -->
         <div id="no-shop">
         <p class= "paragrafo">
@@ -46,31 +55,64 @@
 
     </section>
 
-    <section>
+    <!-- PEDIDOS -->
+
+
+    <section id="pedidos" class="<%= id == 'pedidos' ? 'flex' : 'none' %>" >
+
             <!-- Com pedidos -->
+        <% for(let pedido of pedidos) { %>     
 
             <div class="fiscal-note" id="pedido">
-
-                <h4>Pedido 01</h4>
+                
+                <h4>Pedido  #<%=pedido.id %></h4>
                 <div class="products">
-                    <p>Produtos</p>
-                    <span>01 Vaso Decorativo</span>
-                    <span>03 Relógio Vintage</span>
-                    <span>04 Cadeiras Vintage</span>
+                    <span>Data do pedido: <br> <%= pedido.dataPedido %></span>
+                    <span>Status: <%= pedido.status %></span>
+                    <a href="/minhaconta/pedidos/<%=pedido.id%>">Ver</a>
                 </div>
         
                 </div>
+
+        <% } %>
     </section>
 
     <!-- Detalhes da conta -->
 
+    <section id="detalhes" class="<%= id == 'editar' ? 'flex' : 'none' %>">
+     
+
+        <form action="/minhaconta/editar?_method=PUT" method="post">
+            <p>Detalhes da conta</p>
+            <label for="nome">Nome Completo *<input type="text" name="nome" id="nome" value="<%=usuario.nome%>"></label>
+            <label for="nick_name">Nick Name *<input type="text" name="nick_name" id="nick_name" value="<%=usuario.nick_name%>"></label>
+            <label for="email">Endereço de Email * <input type="text" name="email" id="email" value="<%=usuario.email%>"></label>
+            <p>Mudança de Senha</p>
+            <label for="password">Senha atual (deixe em branco para não alterar) <input type="text" name="senha" id="password" ></label>
+            <label for="new-pass">Nova Senha (deixe em branco para não alterar)<input type="text" name="newPass" id="new-pass" ></label>
+            <label for="confirm-pass">Confirme a nova senha <input type="text" name="confirmPass" id="confirm-pass" ></label>
+
+            <button id="btn-save" type="submit">Salvar Alterações</button>
+        </form>
+     
+    </section>
 
     <!-- Atualizar Endereço -->
 
+    <section id="endereco" class="<%= id == 'endereco' ? 'flex' : 'none' %>">
+        <form action="">
+            <p>Atualizar Endereço</p>
+            <label for="rua">Rua (com número)*<input type="text" name="rua" id="rua"></label>
+            <label for="complemento">Complemento *<input type="text" name="complemento" id="complemento"></label>
+            <label for="cidade">Cidade *<input type="text" name="cidade" id="cidade"></label>
+            <label for="estado">Estado *<input type="text" name="estado" id="estado"></label>
+            <label for="cep">CEP *<input type="text" name="nick_name" id="nick_name"></label>
+            <label for="telefone">Telefone *<input type="text" name="telefone" id="telefone" value="<%=usuario.telefone%>"></label>
+
+            <button id="btn-save" type="submit">Salvar Alterações</button>
+        </form>
+    </section>
     
-
-
-
 
 </div>
 

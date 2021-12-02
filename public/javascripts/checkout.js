@@ -87,24 +87,23 @@ function getCheckout() {
 }
 
 
-const id = document.querySelector("body > div.page-container > div.checkout-container > div.user-info > p:nth-child(1)").textContent
 
-const btn = document.querySelector("body > div.page-container > div.payment-container > button")
+const btn = document.getElementById('btn-confirm')
 
-btn.addEventListener('click', function(){
+btn.addEventListener('click', function(e){
 
-    console.log('clicou')
+
+    document.getElementById('produtos').value = localStorage.getItem('carrinho')
+    
     Swal.fire({
         icon: 'success',
-        title: 'Pedido solicitado com sucesso ! Continue comprando...',
+        title: 'Pedido confirmado!',
         confirmButtonColor: "#003884",
-    })
+      })
 
-    localStorage.clear();
-
-    setTimeout(function () {
-        window.location.href = '/loja'
-    }, 3500);
+      localStorage.clear();
+      
+     
 
 })
 
