@@ -18,3 +18,5 @@ btnClose.addEventListener('click', function (e) {
     alert.style.display = "none"
 })
 
+
+

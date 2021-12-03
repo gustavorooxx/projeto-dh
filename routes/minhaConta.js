@@ -14,4 +14,7 @@ router.put('/minhaconta/editar', validaSession, MinhaContaController.editar)
 //rota para exibir produtos
 router.get('/minhaconta/pedidos/:idPedido', validaSessionPedidos, MinhaContaController.showOrder)
 
+//logout
+router.get('/logout', validaSession, MinhaContaController.logout)
+
 module.exports = router;

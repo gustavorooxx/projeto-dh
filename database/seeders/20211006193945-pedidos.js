@@ -11,13 +11,6 @@ module.exports = {
        status: 'Preparando para entrega',
        status_id: '2'
     },
-    {
-      id: '2',
-      dataPedido: 'Dia 05 de Novembro de 2021, às 14:30',
-      usuario_id: '1',
-      status: 'Pedido Confirmado',
-      status_id: '1'
-   },
    {
     id: '3',
     dataPedido: 'Dia 06 de Novembro de 2021, às 15:30',

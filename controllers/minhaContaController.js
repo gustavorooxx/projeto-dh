@@ -8,14 +8,21 @@ const MinhaContaController = {
         // console.log(typeof id)
         const usuarioId = req.session.usuario.id
         const pedidosUsuario = await Pedido.findAll({ where: { usuario_id: usuarioId } })
-        res.render('minhaconta', { usuario: req.session.usuario, id: id, pedidos: pedidosUsuario, alerta: false })
-    },
 
+        console.log("AQUI", typeof pedidosUsuario)
+        res.render('minhaconta', {
+            usuario: req.session.usuario,
+            id: id,
+            pedidos: pedidosUsuario,
+            alerta: false,
+            semPedido: 'compras',
+            none: ' '
+        })
+    },
     editar: async (req, res) => {
         const id = req.session.usuario.id
         const { nome, nick_name, email, senha, newPass, confirmPass } = req.body
         const usuario = await Usuario.findOne({ where: { id: id } })
-
 
         if (senha == '' || newPass == '') {
 
@@ -28,14 +35,14 @@ const MinhaContaController = {
                     where: { id }
                 })
 
-
-            req.session.usuario = { id, nome, nick_name, email };
+            const usuario2 = await Usuario.findOne({ where: { id: id } })
+            req.session.usuario = usuario2
 
             setTimeout(() => {
                 res.redirect('/minhaconta/editar');
             }, 2500);
 
-        } else if (!bcrypt.compareSync(senha, usuario.senha)) {
+        } else if (senha && !bcrypt.compareSync(senha, usuario.senha)) {
             const usuarioId = req.session.usuario.id
             const pedidosUsuario = await Pedido.findAll({ where: { usuario_id: usuarioId } })
             return res.render('minhaconta', {
@@ -78,7 +85,7 @@ const MinhaContaController = {
                 res.redirect('/minhaconta/editar');
             }, 2500);
 
-        } else{
+        } else {
             const usuarioId = req.session.usuario.id
             const pedidosUsuario = await Pedido.findAll({ where: { usuario_id: usuarioId } })
             return res.render('minhaconta', {
@@ -90,23 +97,23 @@ const MinhaContaController = {
                 mensagem2: "Tente novamente."
             })
         }
-
-
     },
-
     showOrder: async (req, res) => {
         const { idPedido } = req.params;
         const usuarioId = req.session.usuario.id
+        const pedidoUsuario = await Pedido.findOne({ where: { id: idPedido } })
         const pedido = await sequelize.query("SELECT * FROM `pedido_x_produto` inner join produto ON pedido_x_produto.produto_id = produto.id WHERE pedido_id = :pedidoId ", {
             replacements: { pedidoId: idPedido },
             type: QueryTypes.SELECT
         });
 
+        res.render('pedido', { usuario: req.session.usuario, pedidos: pedido, pedido: pedidoUsuario});
+    },
+    logout: (req, res) => {
 
-
-        res.render('pedido', { usuario: req.session.usuario, pedidos: pedido });
+        console.log(req.cookies)
+        res.clearCookie("connect.sid").redirect('/');
     }
-
 }
 
 module.exports = MinhaContaController;

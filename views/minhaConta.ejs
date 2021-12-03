@@ -36,16 +36,18 @@
             <li><a class="<%= id == 'pedidos' ? 'destaque' : '' %>" href="/minhaconta/pedidos">Pedidos</a></li>
             <li><a class="<%= id == 'editar' ? 'destaque' : '' %>" href="/minhaconta/editar">Detalhes da conta</a></li>
             <li><a class="<%= id == 'endereco' ? 'destaque' : '' %>" href="/minhaconta/endereco">Atualizar Endereço</a></li>
-            <li><a class="<%= id == 'logout' ? 'destaque' : '' %>" href="/minhaconta/logout">Sair</a></li>
+            <li><a class="<%= id == 'logout' ? 'destaque' : '' %>" href="/logout">Sair</a></li>
         </ul>
     </section>
 
     
     <!-- Exibição menu -->
 
-    <!-- PEDIDOS -->
-    <section class="compras"  >
-        <!-- Sem pedidos -->
+   
+    <!-- Sem pedidos -->
+    <% if(JSON.stringify(pedidos) == '[]') {%>
+    <% console.log(pedidos) %>
+    <section class="compras" id="#compras">
         <div id="no-shop">
         <p class= "paragrafo">
             Nenhuma compra realizada :(
@@ -54,10 +56,10 @@
         </div>
 
     </section>
+        <% } %>
+
 
     <!-- PEDIDOS -->
-
-
     <section id="pedidos" class="<%= id == 'pedidos' ? 'flex' : 'none' %>" >
 
             <!-- Com pedidos -->
@@ -67,11 +69,10 @@
                 
                 <h4>Pedido  #<%=pedido.id %></h4>
                 <div class="products">
-                    <span>Data do pedido: <br> <%= pedido.dataPedido %></span>
-                    <span>Status: <%= pedido.status %></span>
-                    <a href="/minhaconta/pedidos/<%=pedido.id%>">Ver</a>
+                    <span>Data do pedido: <br> <span><%= pedido.dataPedido %></span></span>
+                    <span>Status: <br> <span><%= pedido.status %></span></span>
                 </div>
-        
+                <a href="/minhaconta/pedidos/<%=pedido.id%>">VER</a>
                 </div>
 
         <% } %>

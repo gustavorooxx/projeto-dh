@@ -61,8 +61,13 @@
 
         <ul>
            <li><a href="/carrinho"><i class="fas fa-shopping-cart"></i> <span id="total-cart-mobile"></span></a></li>
-           <li><a href="/login"><i class="fas fa-user"></i> <span>Entrar/Registrar</span></a></li>
-           <li><a href=""><i class="fas fa-sign-out-alt"></i> <span>Sair</span> </a></li> 
+
+           <% if (usuario.logado == false){ %> 
+                <li><a href="/login"><i class="fas fa-user"></i> <span>Entrar/Registrar</span></a></li>
+           <% } else { %>
+                <li><a href="/minhaconta/pedidos"><i class="fas fa-user"></i> <span><%= usuario.nick_name%></span></a></li>
+            <% } %>
+           <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> <span>Sair</span> </a></li> 
         </ul>
 
     </div>

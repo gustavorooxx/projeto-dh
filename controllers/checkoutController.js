@@ -5,6 +5,7 @@ const brLocale = require('date-fns/locale/pt');
 
 const CheckoutController = {
     show: (req, res) => {
+        console.log(req.session.usuario)
         res.render('checkout', { usuario: req.session.usuario })
     },
 
