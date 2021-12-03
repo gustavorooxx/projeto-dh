@@ -10,5 +10,7 @@ router.get('/loja/produto/:id', validaSession, ShopController.showProduct)
 
 router.get('/loja/cor/:cor_id', validaSession, ShopController.colorFilters)
 
+router.get('/loja/preco', validaSession, ShopController.priceFilter)
+
 
 module.exports = router;

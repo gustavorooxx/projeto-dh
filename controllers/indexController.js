@@ -48,7 +48,7 @@ const IndexController = {
         const vermelho = await Produto.findAll({where: {cor_id:5}})
         const branco = await Produto.findAll({where: {cor_id:6}})
 
-        //Guardar a string buscada em uma variavel busca
+        //Guardar a string buscada em uma variavel searh
         var {search} = req.query;
 
         //Pesquisa com operador

@@ -15,8 +15,6 @@ const MinhaContaController = {
             id: id,
             pedidos: pedidosUsuario,
             alerta: false,
-            semPedido: 'compras',
-            none: ' '
         })
     },
     editar: async (req, res) => {

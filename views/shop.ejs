@@ -49,11 +49,11 @@
 
             <div>
                 <h5>PREÇO</h5>
-                <form action="">
+                <form action="/loja/preco">
                     <label for="min-price">Min </label>
-                    <input type="number" id="min-price" name="min-price" min="0" max="9999" step="10" value="30">
+                    <input type="number" id="min-price" name="minPrice" min="0" max="9999" step="10" value="30">
                     <label for="max-price">Max </label>
-                    <input type="number" id="max-price" name="max-price" min="0" max="9999" step="10" value="50">
+                    <input type="number" id="max-price" name="maxPrice" min="0" max="9999" step="10" value="50">
                     <input class="apply" type="submit" value="Aplicar">
                 </form>
                 
@@ -61,9 +61,15 @@
         </aside>
 
         <!-- Produtos -->
-
+     
         <div class="products">
             <section>
+                <% if(JSON.stringify(produtos) == '[]') { %>
+                    <div>
+                    <p>Nenhum produto encontrado!</p>
+                    <span>Continue acompanhando, renovamos nosso estoque toda semana!</span>
+                    </div>
+                <% } %>
 
                 <% for(let produto of produtos) { %>
                     
