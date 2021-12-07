@@ -7,6 +7,9 @@ const validaSession = require("../middlewares/validaSession")
 
 router.get('/login', loginController.show)
 
-router.post('/', validaSession, loginController.login)
+router.post('/', validaSession, loginController.registrar)
+
+router.post('/loja', validaSession, loginController.login)
+
 
 module.exports = router;

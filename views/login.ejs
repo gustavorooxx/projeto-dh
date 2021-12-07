@@ -25,7 +25,7 @@
         </div>
      <% } %>
 
-      <img src="images/logo-login.png" alt="">
+      <img style="display: none;" src="images/logo-login.png" alt="">
       
       <div class="form-container">
         <div class="buttons">
@@ -33,22 +33,23 @@
           <div class="btn-register" id="btn-register" onclick="registerBtn()"><h5>CADASTRO</h5></div>
         </div>
         
-        <form id="loginForm" action="/" method="POST">
+        <form id="loginForm" action="/loja" method="POST">
           <label for="email">E-mail</label>
           <input type="email" name="email" id="email">
           <label for="senha">Senha</label>
           <input type="password" name="senha" id="senha">
-          <div class="rememberPass"><input type="checkbox" name="rememberPass" id="rememberPass"> <span>Lembrar-me</span></div>
+          <!-- <div class="rememberPass"><input type="checkbox" name="rememberPass" id="rememberPass"> <span>Lembrar-me</span></div> -->
           <div><a href="">Esqueceu sua senha? Clique aqui.</a></div>
           <button type="submit">Login</button>
         </form>
         
-        <form id="registerForm" action="" method="POST">
+        <form id="registerForm" action="/" method="POST">
           <p>Preencha seus dados para cadastro!</p>
-          <input placeholder="Nome Completo" type="text" name="nome" id="nome">
-          <input placeholder="E-mail" type="email" name="email" id="email">
-          <input placeholder="Senha" type="password" name="password" id="password">
-          <input placeholder="Confirme sua senha" type="password" name="password" id="password">
+          <input placeholder="Nome completo*" type="text" name="novoNome" id="nome">
+          <input placeholder="Nick name*" type="text" name="nickname" id="nickname">
+          <input placeholder="E-mail*" type="email" name="novoEmail" id="email">
+          <input placeholder="Senha*" type="password" name="password" id="password">
+          <input placeholder="Confirme sua senha*" type="password" name="confirmPassword" id="password">
           <button type="submit">CADASTRAR</button>
         </form>
       </div>   

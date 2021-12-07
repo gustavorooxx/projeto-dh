@@ -54,9 +54,11 @@
         <a href="/contato">Contato</a>
         <a href="/sobre-nos">Sobre</a>
 
-        <form action="">
-            <li><input placeholder="O que você procura?" type="text" name="search" id="search"> 
-            <img class="loupe" src="/images/loupe.png" alt=""> </li>
+        <form action="/search" method="GET">
+            <li>
+                <input placeholder="O que você procura?" type="text" name="search" id="search"> 
+                <input class="loupe" type="submit" value=""> 
+            </li>
         </form> 
 
         <ul>

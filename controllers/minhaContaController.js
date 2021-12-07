@@ -9,7 +9,7 @@ const MinhaContaController = {
         const usuarioId = req.session.usuario.id
         const pedidosUsuario = await Pedido.findAll({ where: { usuario_id: usuarioId } })
 
-        console.log("AQUI", typeof pedidosUsuario)
+        // console.log("AQUI", typeof pedidosUsuario)
         res.render('minhaconta', {
             usuario: req.session.usuario,
             id: id,
@@ -77,7 +77,7 @@ const MinhaContaController = {
 
             req.session.usuario = usuario2;
 
-            console.log(req.session.usuario)
+            // console.log(req.session.usuario)
 
             setTimeout(() => {
                 res.redirect('/minhaconta/editar');
@@ -96,6 +96,29 @@ const MinhaContaController = {
             })
         }
     },
+
+    endereco: async (req, res) => {
+        const id = req.session.usuario.id
+        const { rua, complemento, cidade, estado, cep, telefone } = req.body
+        const endereco = rua + ' ' + complemento + ' ' + cidade + ' ' + estado + ' ' + cep.toString()
+        console.log(endereco)
+        const usuario = await Usuario.findOne({ where: { id: id } })
+        const update = await Usuario.update({
+            enderecoEntrega: endereco,
+            telefone: telefone
+        },
+            {
+                where: { id }
+            })
+
+        const usuario2 = await Usuario.findOne({ where: { id: id } })
+        req.session.usuario = usuario2
+        
+        setTimeout(() => {
+        res.redirect('/minhaconta/endereco');
+        }, 2500);
+           
+    },
     showOrder: async (req, res) => {
         const { idPedido } = req.params;
         const usuarioId = req.session.usuario.id
@@ -109,7 +132,7 @@ const MinhaContaController = {
     },
     logout: (req, res) => {
 
-        console.log(req.cookies)
+        // console.log(req.cookies)
         res.clearCookie("connect.sid").redirect('/');
     }
 }
